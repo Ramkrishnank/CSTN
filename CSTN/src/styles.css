@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+/*<link href="../assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.common.min.css" rel="stylesheet" type="text/css" / >
+<link href="../assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.all.min.css" rel="stylesheet" type="text/css" / >
+<link href="../assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.min.css" rel="stylesheet" type="text/css" / >
+<link href="../assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.default.min.css" rel="stylesheet" type="text/css" / >
+<link href="../assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.default.min.css" rel="stylesheet" type="text/css" / >
+<link rel="stylesheet" href="../assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/styles.css" >*/
+
+@import './assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.common.min.css';
+@import './assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.all.min.css';
+@import './assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.min.css';
+@import './assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.default.min.css';
+@import './assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.default.min.css';
+@import './assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/styles.css';
+@import './assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/map-slidebars.css';
+@import './assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/esri.css';
+@import './assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/map-styles.css';
+
+/*@import 'https://fonts.googleapis.com/css?family=Muli:300, 400, 300italic, 400italic';*/
+
+/*@import '';
+@import '';
+@import '';
+@import '';
+@import '';
+@import '';*/
+

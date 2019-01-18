@@ -1,0 +1,827 @@
+
+
+
+
+<!doctype html>
+<html>
+
+<!-- Mirrored from www.crimemapping.com/map by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Dec 2018 08:34:03 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>CrimeMapping.com - Helping You Build a Safer Community</title>
+  <link href='https://fonts.googleapis.com/css?family=Muli:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+  <!--<link rel="stylesheet" href="../ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/map-slidebars.css">-->
+
+  <!--ArcGIS API CSS Reference -->
+  <!--<link rel="stylesheet" href="../ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/esri.css">-->
+
+
+
+  <!-- Kendo UI MVC Styles -->
+  <!--<link href="../ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.common.min.css" rel="stylesheet" type="text/css" />
+  <link href="../ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.all.min.css" rel="stylesheet" type="text/css" />
+  <link href="../ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.min.css" rel="stylesheet" type="text/css" />
+  <link href="../ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.default.min.css" rel="stylesheet" type="text/css" />
+  <link href="../ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.default.min.css" rel="stylesheet" type="text/css" />-->
+  <!-- Omega Styles -->
+  <!--<link rel="stylesheet" href="../ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/map-styles.css">-->
+
+  <!-- jQuery -->
+  <<!--script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/jquery-1.10.2.min.js"></script>-->
+
+  <!-- Detect Browser Zoom -->
+  <!--<script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/detect-zoom.min.js" type="text/javascript"></script>-->
+
+  <!-- Kendo UI MVC Scripts -->
+  <!--<script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/jquery.min.js                                       "        ></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/jszip.min.js                              "                  ></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.core.min.js                              "                                      ></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.angular.min.js                               "               ></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.binder.min.js                                "          ></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.calendar.min.js                       "           ></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.color.min.js                                   "                  >  </script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.columnmenu.min.js                          "             ></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.columnsorter.min.js                                "                ></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.data.min.js                                "                         ></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.datepicker.min.js                   "                           ></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.draganddrop.min.js                 "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.drawing.min.js                       "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.editable.min.js                          "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.excel.min.js                       "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.filtercell.min.js                                   "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.filtermenu.min.js                  "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.fx.min.js                                    "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.groupable.min.js                                    "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.list.min.js                                "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.listview.min.js                                 "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.menu.min.js                                   "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.actionsheet.min.js              "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.loader.min.js                                "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.pane.min.js                  "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.popover.min.js          "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.scroller.min.js           "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.shim.min.js                       "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.view.min.js              "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.numerictextbox.min.js           "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.ooxml.min.js                                    "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.pager.min.js                               "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.pdf.min.js                                 "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.popup.min.js                                 "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.progressbar.min.js                        "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.reorderable.min.js                          "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.resizable.min.js                   "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.selectable.min.js                    "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.timepicker.min.js                "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.userevents.min.js                 "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.validator.min.js                 "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.view.min.js                                    "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.virtuallist.min.js                           "></script>
+
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.autocomplete.min.js              "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.combobox.min.js                        "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.core.min.js                    "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.themes.min.js                        "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.chart.min.js                     "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.chart.funnel.min.js                    "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.chart.polar.min.js                     "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.datetimepicker.min.js                      "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.dropdownlist.min.js                            "></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.grid.min.js                            "></script>
+
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.aspnetmvc.min.js                               "></script>-->
+
+  <!--ArcGIS API JS Reference:  Must come after Kendo Scripts to prevent conflicts -->
+  <script src="https://js.arcgis.com/3.14/"></script>
+
+
+
+  <!-- Slidebars -->
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/responsive-nav.js"></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/slidebars.js"></script>
+
+  <!-- Load Google Analytics -->
+  <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-73322505-1', 'auto');
+          ga('send', 'pageview');
+
+  </script>
+
+  <!-- Google Analytics Event Tracking -->
+  <script type="text/javascript" src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/analytics/eventtracking.js"></script>
+
+  <!-- Omega References -->
+  <!--<script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/site/ScriptHelper-2.js"  ></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/site/map/MapSettings.js"   ></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/site/Map/Map.js"              ></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/site/map/Test.js"           >               </script>
+  <script type="text/javascript" src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/site/login/staging.js"><-->/script>
+
+  <!-- Listen for Browser Events -->
+  <script type="text/javascript">
+        $(document).ready(function () {
+            //- Poll every 25 seconds for browser zoom level changes
+            ScriptHelper.BeginListeningForBrowserZoom(null, 25000);
+        });
+  </script>
+
+  <!-- Alert Signup-->
+  <!--<script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/site/alerts/AlertSignup.js        "      ></script>
+  <script src="../ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/site/alerts/AlertSignupSettings.js        "></script>
+  <script src="../ocpd-content.azu-->r<!--eedge.net/cdn/scripts/mini/2.4.1.0/site/alerts/AlertSignupMap.js           "></script>-->
+
+  <!-- Initialize Map -->
+  <script type="text/javascript">
+        $(document).ready(function () {
+
+            //- Setup slidebars
+            $.slidebars({
+                siteClose: false,
+            });
+
+            //- When user types in location search text box
+            $("#locationSearch").attr("onKeyUp", "Map.LocationSearchKeyUp()");
+            Map.ClearAddressSearch();
+
+            //- Start page with Content Loading dialog active
+            Map.LoadActivityModal();
+
+            //- Initalize Map
+            Map.Init({
+  "MapType": 1,
+  "SuggestionSettings": {
+    "nc": 3,
+    "lc": "USA,CAN",
+    "mns": 10,
+    "mgs": 80,
+    "ds": 16093.4,
+    "gu": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/find",
+    "su": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/suggest"
+  },
+  "LocationSearchX": "",
+  "LocationSearchY": "",
+  "Settings": {
+    "ol": {
+      "sm": {
+        "ox": 11.0,
+        "oy": 15.0,
+        "in": "OrganizationMarker.SVG"
+      },
+      "ss": {
+        "ox": 10.0,
+        "oy": 8.0,
+        "in": "SelectedOrganizationMarker.SVG"
+      }
+    },
+    "ls": {
+      "ox": 1.1,
+      "oy": 1.2,
+      "in": "MyLocation.svg"
+    },
+    "sf": {
+      "qg": {
+        "ol": {
+          "co": "#FFE60F0F",
+          "wd": 3.0,
+          "st": 0
+        },
+        "co": "#7FFFFFFF",
+        "st": 6
+      },
+      "pt": {
+        "ox": 0.0,
+        "oy": 0.0,
+        "in": "MyLocation.svg"
+      },
+      "ln": {
+        "co": "#7F2A6199",
+        "wd": 4.0,
+        "st": 5
+      },
+      "pl": {
+        "ol": {
+          "co": "#FFFFFFFF",
+          "wd": 3.0,
+          "st": 5
+        },
+        "co": "#FF2A6199",
+        "st": 6
+      }
+    },
+    "rl": {
+      "ds": 0,
+      "px": 6.0,
+      "py": 17.0,
+      "vs": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        100,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120
+      ],
+      "sx": 0.0,
+      "sy": 3.0,
+      "lx": 0.0,
+      "ly": 40.0
+    },
+    "mxs": 30000000.0,
+    "mns": 2250.0,
+    "zs": 5000.0,
+    "zms": 200000.0,
+    "mrs": 500000.0,
+    "mls": 10000.0,
+    "ums": false,
+    "bid": 1,
+    "bl": [
+      {
+        "$type": "OmegaGroup.Civic.Data.Map.Layers.TileBackgroundLayer, OmegaGroup.Civic.Data",
+        "ul": "https://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer",
+        "id": 1,
+        "nm": "Streets",
+        "lr": 1
+      },
+      {
+        "$type": "OmegaGroup.Civic.Data.Map.Layers.TileBackgroundLayer, OmegaGroup.Civic.Data",
+        "ul": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer",
+        "id": 2,
+        "nm": "Terrain",
+        "lr": 2
+      },
+      {
+        "$type": "OmegaGroup.Civic.Data.Map.Layers.TileBackgroundLayer, OmegaGroup.Civic.Data",
+        "ul": "https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer",
+        "id": 3,
+        "nm": "Imagery",
+        "lr": 3
+      }
+    ]
+  },
+  "TemporalFilterSettings": {
+    "df": {
+      "$type": "OmegaGroup.Civic.Data.Filter.Temporal.PreviousTemporalFilter, OmegaGroup.Civic.Data",
+      "id": 3,
+      "na": "Previous Week",
+      "nd": 7,
+      "ft": 1
+    },
+    "sc": [
+      {
+        "id": 1,
+        "na": "Yesterday",
+        "nd": 1,
+        "cd": false
+      },
+      {
+        "id": 2,
+        "na": "Previous 3 Days",
+        "nd": 3,
+        "cd": false
+      },
+      {
+        "id": 3,
+        "na": "Previous Week",
+        "nd": 7,
+        "cd": false
+      },
+      {
+        "id": 4,
+        "na": "Previous 4 Weeks",
+        "nd": 28,
+        "cd": false
+      }
+    ],
+    "sd": "20180614"
+  },
+  "SpatialFilterSettings": {
+    "ud": false,
+    "df": null,
+    "bs": [
+      {
+        "na": "500 feet",
+        "ds": 152.4,
+        "lr": 1,
+        "id": 1
+      },
+      {
+        "na": "1000 feet",
+        "ds": 304.8,
+        "lr": 2,
+        "id": 2
+      },
+      {
+        "na": "1500 feet",
+        "ds": 457.2,
+        "lr": 3,
+        "id": 3
+      },
+      {
+        "na": "1/4 mile",
+        "ds": 402.336,
+        "lr": 4,
+        "id": 4
+      },
+      {
+        "na": "1/2 mile",
+        "ds": 804.672,
+        "lr": 5,
+        "id": 5
+      },
+      {
+        "na": "1 mile",
+        "ds": 1609.34,
+        "lr": 6,
+        "id": 6
+      },
+      {
+        "na": "2 miles",
+        "ds": 3218.69,
+        "lr": 7,
+        "id": 7
+      }
+    ],
+    "db": 804.672,
+    "mn": 10.0,
+    "mx": 5000.0
+  },
+  "DefaultBuffer": 0.0,
+  "BufferShortCuts": null,
+  "Startup": {
+    "$type": "OmegaGroup.Civic.Data.Map.MapStartup, OmegaGroup.Civic.Data",
+    "sv": {
+      "x": -13041230.0081063,
+      "y": 3857631.01463377,
+      "sc": 80000.0
+    }
+  },
+  "ShareMap": false,
+  "ShareMapID": "",
+  "CrimeAlert": false,
+  "CrimeAlertID": "",
+  "ShareMapUseSelectedPinID": false,
+  "ShareMapSelectedPinID": null,
+  "BackgroundLayers": [
+    {
+      "$type": "OmegaGroup.Civic.Data.Map.Layers.TileBackgroundLayer, OmegaGroup.Civic.Data",
+      "ul": "https://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer",
+      "id": 1,
+      "nm": "Streets",
+      "lr": 1
+    },
+    {
+      "$type": "OmegaGroup.Civic.Data.Map.Layers.TileBackgroundLayer, OmegaGroup.Civic.Data",
+      "ul": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer",
+      "id": 2,
+      "nm": "Terrain",
+      "lr": 2
+    },
+    {
+      "$type": "OmegaGroup.Civic.Data.Map.Layers.TileBackgroundLayer, OmegaGroup.Civic.Data",
+      "ul": "https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer",
+      "id": 3,
+      "nm": "Imagery",
+      "lr": 3
+    }
+  ],
+  "CultureFolder": "",
+  "WhatAttributeCategories": [
+    {
+      "id": 1,
+      "na": "Arson"
+    },
+    {
+      "id": 2,
+      "na": "Assault"
+    },
+    {
+      "id": 3,
+      "na": "Burglary"
+    },
+    {
+      "id": 4,
+      "na": "Disturbing the Peace"
+    },
+    {
+      "id": 5,
+      "na": "Drugs / Alcohol Violations"
+    },
+    {
+      "id": 6,
+      "na": "DUI"
+    },
+    {
+      "id": 7,
+      "na": "Fraud"
+    },
+    {
+      "id": 8,
+      "na": "Homicide"
+    },
+    {
+      "id": 9,
+      "na": "Motor Vehicle Theft"
+    },
+    {
+      "id": 10,
+      "na": "Robbery"
+    },
+    {
+      "id": 11,
+      "na": "Sex Crimes"
+    },
+    {
+      "id": 12,
+      "na": "Theft / Larceny"
+    },
+    {
+      "id": 13,
+      "na": "Vandalism"
+    },
+    {
+      "id": 14,
+      "na": "Vehicle Break-In / Theft"
+    },
+    {
+      "id": 15,
+      "na": "Weapons"
+    },
+    {
+      "id": 17,
+      "na": "Sex Offender"
+    },
+    {
+      "id": 18,
+      "na": "Sexual Predator"
+    }
+  ],
+  "WhatSelectedAttributeCategories": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "MyLocationSymbol": {
+    "ox": 1.1,
+    "oy": 1.2,
+    "in": "MyLocation.svg"
+  },
+  "OrganizationSymbolInfo": {
+    "sm": {
+      "ox": 11.0,
+      "oy": 15.0,
+      "in": "OrganizationMarker.SVG"
+    },
+    "ss": {
+      "ox": 10.0,
+      "oy": 8.0,
+      "in": "SelectedOrganizationMarker.SVG"
+    }
+  },
+  "IsSessionActive": false,
+  "UserSession": null,
+  "SessionUserName": null,
+  "OrganizationFilter": null,
+  "ErrorCode": 0,
+  "ErrorMessage": null,
+  "DefaultAgencyID": -1,
+  "ResourcePath": "https://ocpd-content.azureedge.net/cdn",
+  "VersionPath": "/mini/2.4.1.0/"
+});
+
+
+        });
+
+        //- Handle browser back button scenarios in IE
+        window.onbeforeunload = function () {
+
+            if (Map.AlertsPageOpen) {
+                Map.AlertsPageOpen = false;
+                document.location.reload();
+            }
+            if (Map.ReportsPageOpen) {
+                Map.ReportsPageOpen = false;
+                document.location.reload();
+            }
+        }
+  </script>
+
+  <script type="text/x-kendo-tmpl" id="whatListViewTemplate">
+    <div style="color:white; border-color:rgb(51,51,51)">
+      <table id="tblAtt${ID}" style="width:350px; border:1px white">
+        <tr id="trAtt${ID}" style="cursor: pointer" onclick="Map.WhatPanelClick('${ID}', false)">
+          <td>
+            <img id="imgAtt${ID}" src="https://ocpd-content.azureedge.net/cdn/images/IncidentType/WhatPanel/${ID}.svg" height="28" width="28" />
+          <td>
+            &nbsp;
+          </td>
+          <td style="width:300px">
+            <a id="attName${ID}" class="btnWhiteText" style="padding-left:10px; float:left">${Name}</a>
+          </td>
+          <td style="width:10px">
+            <input type="checkbox" name="${ID}" id="chkAtt${ID}" class="whiteCheck-checkbox" /><label for="${ID}" class="whiteCheck-label"></label>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </script>
+
+
+  <script type="text/javascript">
+        $("li.sb-open-left a").click(function () {
+            alert("clicked");
+        });
+  </script>
+</head>
+
+<body onresize="Map.WindowResized();" style="min-width:1000px; overflow:hidden">
+
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label id="lblnavtrigger" for="nav-trigger" onclick="Map.NavTriggerClick()"></label>
+
+  <ul id="mapnavigation" class="navigation">
+    <li class="nav-item"><a href="about.html" target="_blank">About</a></li>
+    <li class="nav-item"><a href="help.html" target="_blank">Help</a></li>
+    <li class="nav-item"><a href="FAQ.html" target="_blank">FAQ</a></li>
+    <li class="nav-item"><a href="Contact.html" target="_blank">Contact</a></li>
+    <li class="nav-item"><a href="WhatsNew.html" target="_blank">What&#39;s New</a></li>
+    <li class="nav-item"><a href="index.html">Home</a></li>
+  </ul>
+
+  <!-- Modal Overlay Dialog -->
+  <div id="modalBgTransparency"></div>
+  <div id="modalDialog">
+    <div class="initializeContentModal">
+      <div id="floatingCirclesG">
+        <div class="f_circleG" id="frotateG_01"></div>
+        <div class="f_circleG" id="frotateG_02"></div>
+        <div class="f_circleG" id="frotateG_03"></div>
+        <div class="f_circleG" id="frotateG_04"></div>
+        <div class="f_circleG" id="frotateG_05"></div>
+        <div class="f_circleG" id="frotateG_06"></div>
+        <div class="f_circleG" id="frotateG_07"></div>
+        <div class="f_circleG" id="frotateG_08"></div>
+      </div>
+      <p style="margin:25px;">
+        Preparing Map Content...
+      </p>
+    </div>
+  </div>
+
+  <div id="sb-site" style="padding:100px 0px 0px 75px">
+    <input id="mapType" type="hidden" value="standard" />
+    <input id="mapAgency" type="hidden" value="-1" />
+
+    <!-- Page Header -->
+    <div id="pgHeader">
+      <div class="mapHeaderLogo">
+        <a href="home.html"><img style="border: none" src="https://ocpd-content.azureedge.net/cdn/images/map/logo-crimemapping-mapview.svg" width="499" height="24" alt="CrimeMapping.com - Helping You Build a Safer Community" /></a>
+        <ul class="loginSignup">
+          <li><a class="signupAccount" onclick="Map.OpenAlertsSignup()" href="javascript:void(0)">Receive Alerts</a></li>
+          <!--<li><a class="login" href="#">Log in</a></li>-->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Top Toolbar -->
+    <div id="topToolbar">
+      <span class="searchIcon"><img src="https://ocpd-content.azureedge.net/cdn/images/map/icon-search.svg" alt="" /></span>
+      <span class="clearSearch"><a class="btnClearSearch" href="javascript:void(0);" onclick="Map.ClearAddressSearch()"></a></span>
+      <input class="landingInputKendo" id="locationSearch" name="locationSearch" style="width:340px;float:left;margin:5px;background:#FFF;" type="text" />
+      <script>
+	jQuery(function(){jQuery("#locationSearch").kendoAutoComplete({"select":Map.LocationSuggestSelected,"change":Map.LocationSearchTextChanged,"open":Map.LocationSuggestOpen,"dataSource":{"transport":{"read":{"url":"/Map/GetLocationSuggestions","data":Map.LocationSuggestParameters},"prefix":""},"serverFiltering":true,"filter":[],"schema":{"errors":"Errors"}},"dataTextField":"Text","minLength":3,"template":"\u003cdiv style=\"width:auto;height:20px;padding:0px;\"\u003e\u003cdiv style=\"width:auto;float:left;\"\u003e# if (Source == \"0\")  { #\u003cimg src=\u0027https://ocpd-content.azureedge.net/cdn/images/map/location-type-address.svg\u0027 style=\"float:left;width:25px;height:25px;\" /\u003e# } else if(Source == \"1\"){ #\u003cimg src=\u0027https://ocpd-content.azureedge.net/cdn/images/map/location-type-boundary-polygon.svg\u0027 style=\"float:left;width:25px;height:25px;\" /\u003e# } else if(Source == \"2\"){ #\u003cimg src=\u0027https://ocpd-content.azureedge.net/cdn/images/map/location-type-feature-point.svg\u0027 style=\"float:left;width:25px;height:25px;\" /\u003e# } else if(Source == \"3\"){ #\u003cimg src=\u0027https://ocpd-content.azureedge.net/cdn/images/map/location-type-line.svg\u0027 style=\"float:left;width:25px;height:25px;\" /\u003e# } else if(Source == \"4\"){ #\u003cimg src=\u0027https://ocpd-content.azureedge.net/cdn/images/map/location-type-agency.svg\u0027 style=\"float:left;width:25px;height:25px;\" /\u003e# } #\u003c/div\u003e\u003cdiv style=\"float:left;display:block;width:auto;\"\u003e\u003cspan style=\"font-size:12px;font-weight:bold;margin:0px 0px 5px 5px;\"\u003e#=Text#\u003c/span\u003e\u003cspan style=\"font-size:12px;color:dddddd;font-style:italic;\"\u003e # if(Source == \"1\") {  #(boundary polygon)# } else if(Source == \"2\"){ #(feature point)# } else if(Source == \"3\"){ #(polyline)# } else if(Source == \"4\"){ #(agency)# } #\u003c/span\u003e\u003c/div\u003e\u003c/div\u003e","placeholder":"Enter an address, landmark or zip code"});});
+      </script>
+
+      <a class="locationgo" href="javascript:void(0);" onclick="Map.GeocodeSearchAddress()">Go</a>
+
+      <span class="recordCount">0 Records</span>
+      <span class="dateRange">Date Range: <a id="dateRangeVal" class="btnBlueText" style="cursor:pointer;" onclick="Map.LoadFiltersPanel('when')"></a></span>
+
+      <ul class="reportList">
+        <li><a href="javascript:void(0)" onclick="Map.LoadShareModal();EventTracking.MapSummaryShareMap();"><img style="border-style: none" src="https://ocpd-content.azureedge.net/cdn/images/map/share-map-link.svg" alt="Share This Map" title="Share This Map" /></a></li>
+
+        <li><a class="agencyInfo" href="javascript:void(0)" onclick="Map.OpenOrganizationDetail(null, true); EventTracking.MapAgencyMetadataLinkClicked();"><img style="border-style: none" src="https://ocpd-content.azureedge.net/cdn/images/map/record-details-agency-link-badge.svg" alt="Show Visible Agency Info" title="Show Visible Agency Info" /></a></li>
+      </ul>
+    </div>
+
+    <!-- Client Log In Info -->
+    <!-- Max Records Status -->
+    <div id="divStatusBarMaxRecords" class="statusMaxRecords" style="visibility:hidden;">
+      <span class="statusBarMessage"><img style="margin:6px 9px -3px 0px" src="https://ocpd-content.azureedge.net/cdn/images/map/status-max-records.svg" alt="Max Record Count Reached" />Max record count of <label id="lblMaxRecordCount">500</label> reached. <a class="btnWhiteTextUnderline" href="javascript:void(0)" onclick="Map.StatusBarZLZoomIn()">Zoom in</a> or adjust filter.</span>
+      <span class="statusBarHelp"><a target="_blank" href="help.html#max-records-reached"><img style="margin:6px 9px -1px 0px" src="https://ocpd-content.azureedge.net/cdn/images/map/status-help.svg" alt="Help with this topic" /></a><a class="btnWhiteText" target="_blank" href="help.html#max-records-reached">Help</a></span>
+    </div>
+
+    <!-- Zoom In Status -->
+    <div id="divStatusBarZoomIn" class="statusZoomIn" style="visibility:hidden;">
+      <span class="statusBarMessage"><img style="margin:6px 9px -3px 0px" src="https://ocpd-content.azureedge.net/cdn/images/map/status-zoom-in.svg" alt="Zoom in to view records" /><a class="btnWhiteTextUnderline" href="javascript:void(0)" onclick="Map.StatusBarZoomIn()">Zoom in</a> to view records.</span>
+      <span class="statusBarHelp"><a target="_blank" href="help.html#zoom-in-to-view"><img style="margin:7px 9px -1px 0px" src="https://ocpd-content.azureedge.net/cdn/images/map/status-help.svg" alt="Help with this topic" /></a><a class="btnWhiteText" target="_blank" href="help.html#zoom-in-to-view">Help</a></span>
+    </div>
+
+    <!-- No Data Provided Status -->
+    <div id="divStatusBarNoDataProvided" class="statusNoDataProvided" style="visibility:hidden;">
+      <span class="statusBarMessage"><img style="margin:7px 9px -2px 0px" src="https://ocpd-content.azureedge.net/cdn/images/map/status-no-data-provided.svg" alt="Zoom in to view records" />No data provided for this map extent. <a class="btnWhiteTextUnderline" target="_blank" href="FAQ.html#not-participating">Why?</a></span>
+      <span class="statusBarHelp"><a target="_blank" href="FAQ.html#not-participating"><img style="margin:7px 9px -1px 0px" src="https://ocpd-content.azureedge.net/cdn/images/map/status-help.svg" alt="Help with this topic" /></a><a class="btnWhiteText" target="_blank" href="FAQ.html#not-participating">Help</a></span>
+    </div>
+
+    <!-- No Data Found Status -->
+    <div id="divStatusBarNoDataFound" class="statusNoDataFound" style="visibility:hidden;">
+      <span id="spStatusBarMessage" class="statusBarMessage"><img style="margin:7px 9px -2px 0px" src="https://ocpd-content.azureedge.net/cdn/images/map/status-no-data-found.svg" alt="Zoom in to view records" />No records found when using the current filter.</span>
+      <span id="spStatusBarHelp" class="statusBarHelp"><a target="_blank" href="FAQ.html#no-data-found"><img style="margin:7px 9px -1px 0px" src="https://ocpd-content.azureedge.net/cdn/images/map/status-help.svg" alt="Help with this topic" /></a><a class="btnWhiteText" target="_blank" href="help.html#no-data-found">Help</a></span>
+    </div>
+
+    <!-- Missing Records -->
+    <div id="divStatusBarMissingRecords" class="statusZoomIn" style="visibility:hidden;">
+      <span class="statusBarMessage"><img style="margin:6px 9px -3px 0px" src="https://ocpd-content.azureedge.net/cdn/images/map/status-zoom-in.svg" alt="Missing records" />There are missing records.</span>
+      <span class="statusBarHelp"><a target="_blank" href="help.html#missing-records"><img style="margin:7px 9px -1px 0px" src="https://ocpd-content.azureedge.net/cdn/images/map/status-help.svg" alt="Help with this topic" /></a><a class="btnWhiteText" target="_blank" href="help.html#missing-records">Help</a></span>
+    </div>
+
+    <!-- Agency Filter -->
+    <div id="divStatusBarAgencyFilter" class="statusAgencyFilter" style="visibility:hidden;">
+      <span class="statusBarMessage"><img style="margin:4px 9px -3px 0px; width:20px;" src="https://ocpd-content.azureedge.net/cdn/images/map/record-details-agency-link-badge.svg" alt="Agency Filter" /><span id="statusAgencyName"></span>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="btnWhiteTextUnderline" onclick="Map.ClearAgencyFilterStatus()" href="javascript:void(0)">Remove Filter</a></span>
+      <span class="statusBarHelp"><a target="_blank" href="help.html#agency-filter"><img style="margin:7px 9px -1px 0px" src="https://ocpd-content.azureedge.net/cdn/images/map/status-help.svg" alt="Help with this topic" /></a><a class="btnWhiteText" target="_blank" href="help.html#agency-filter">Help</a></span>
+    </div>
+
+    <!-- Sex Offender Data Available Status -->
+    <div id="divStatusBarSexOffenderData" class="statusSexOffenderData" style="visibility:hidden">
+      <span class="statusBarMessage"><img style="margin:4px 9px -3px 0px; width:20px;" src="https://ocpd-content.azureedge.net/cdn/images/map/status-offender-data.svg" alt="Sex Offender Data Available" /><span>Sex Offender Data Available for this Area.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="btnWhiteTextUnderline" onclick="Map.CloseOffenderStatusBar(true)" href="javascript:void(0)">Display</a>&nbsp;or&nbsp;<a class="btnWhiteTextUnderline" onclick="Map.CloseOffenderStatusBar(false)" href="javascript:void(0)">Dismiss</a></span>
+      <span class="statusBarHelp"><a target="_blank" href="help.html#sex-offender-data-available"><img style="margin:7px 9px -1px 0px" src="https://ocpd-content.azureedge.net/cdn/images/map/status-help.svg" alt="Help with this topic" /></a><a class="btnWhiteText" target="_blank" href="help.html#sex-offender-data-available">Help</a></span>
+    </div>
+
+    <!-- leftToolbar -->
+    <div id="leftToolbar">
+      <ul class="queryBuilder">
+        <br />
+        <li><span style="color:#F30; font-weight:bold; font-size:14px;">FILTERS</span></li>
+        <hr class="queryBuilderDivider" />
+        <li><a id="filtersSummary" class="viewSummary" href="javascript:void(0);" onclick="Map.LoadFiltersPanel('summary')" onmouseover=" Map.filterMouseOver(this)" onmouseout="Map.filterMouseOut(this)"></a></li>
+        <li><a id="filtersWhat" class="viewWhat" href="javascript:void(0);" onclick="Map.LoadFiltersPanel('what'); Map.TogglePinGraphic(true)" onmouseover="Map.filterMouseOver(this)" onmouseout="Map.filterMouseOut(this)"></a></li>
+        <li><a id="filtersWhere" class="viewWhere" href="javascript:void(0);" onclick="Map.LoadFiltersPanel('where'); Map.TogglePinGraphic(true);" onmouseover="Map.filterMouseOver(this)" onmouseout="Map.filterMouseOut(this)"></a></li>
+        <li><a id="filtersWhen" class="viewWhen" href="javascript:void(0);" onclick="Map.LoadFiltersPanel('when'); Map.TogglePinGraphic(true);" onmouseover="Map.filterMouseOver(this)" onmouseout="Map.filterMouseOut(this)"></a></li>
+        <hr class="queryBuilderDivider" />
+
+
+        <li><a id="displayReports" class="viewReportToolbar" onmouseover="Map.viewReportToolbarMouseOver()" onmouseout="Map.viewReportToolbarMouseOut()" href="javascript:void(0)" onclick="Map.OpenReport()"></a></li>
+        <li><a id="reportCharts" class="viewChartsToolbar" onmouseover="Map.viewChartsToolbarMouseOver()" onmouseout=" Map.viewChartsToolbarMouseOut()" href="javascript:void(0)" onclick="Map.OpenReport(true)"></a></li>
+        <hr class="queryBuilderDivider" />
+        <li><a id="btnPrintMap" class="printMapToolbar" target="_blank" href="Error500.html">Print</a></li>
+      </ul>
+
+
+
+    </div>
+
+    <!-- Map, Map Tools -->
+    <div id="mapContent" style="height:100%">
+
+
+
+      <div id="mapTools">
+        <ul class="mapNavigation">
+          <li><a class="zoomIn" href="javascript:Map.ZoomIn()" title="Zoom in"></a></li>
+          <li><a class="zoomOut" href="javascript:Map.ZoomOut()" title="Zoom out"></a></li>
+          <li><a class="distanceToolMap" href="javascript:Map.MeasureDistance()" title="Measure Distance"></a></li>
+
+        </ul>
+      </div>
+
+      <div id="measurementInfo">
+        <div id="measurementLabel">Distance: </div>
+        <div id="measurementValue">&nbsp;</div>
+        <div>
+          <input class="mapUnitsComboBox" id="ddlMapUnits" name="ddlMapUnits" type="text" value="MapUnit" />
+          <script>
+	jQuery(function(){jQuery("#ddlMapUnits").kendoDropDownList({"change":Map.MeasureUnitChange,"select":Map.MeasureUnitChange,"dataSource":[{"Name":"Miles","Value":"Mile"},{"Name":"Feet","Value":"Feet"},{"Name":"Kilometers","Value":"Kilometer"},{"Name":"Meters","Value":"Meter"}],"dataTextField":"Name","dataValueField":"Value"});});
+          </script>
+        </div>
+      </div>
+
+      <!-- Basemap Menu -->
+      <div id="baseMaps">
+        <input class="baseMapsComboBox" id="ddlBasemaps" name="ddlBasemaps" style="border-radius:0px;" type="text" value="1" />
+        <script>
+	jQuery(function(){jQuery("#ddlBasemaps").kendoDropDownList({"change":Map.BasemapChanged,"select":Map.BasemapSelected,"dataSource":[{"Url":"https://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer","ID":1,"Name":"Streets","ListRank":1},{"Url":"https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer","ID":2,"Name":"Terrain","ListRank":2},{"Url":"https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer","ID":3,"Name":"Imagery","ListRank":3}],"dataTextField":"Name","dataValueField":"ID"});});
+        </script>
+
+      </div>
+
+      <!--Map -->
+      <div id="map" style="height:100%;width:auto; text-align:left"></div>
+    </div>
+
+
+  </div><!-- sb-site -->
+
+  <div id="divScaleDisplay" class="scaleDisplay" style="display:none">
+    <label id="lblScale" style="margin-left:60px; top:15px; position:relative"></label>
+  </div>
+
+  <div id="divReportPage" style="display:none; overflow:auto; height:100%; background:#333;">
+
+  </div>
+
+  <div id="divAlertsSignUp" style="display:none; overflow:auto; height:100%; background:#333;">
+
+  </div>
+
+  <!--Right Tools Panel-->
+  <div id="rightPanel" class="sb-slidebar sb-right sb-style-overlay">
+
+    <div id="recordDetailLoader" class="recordDetailsLoader" style="visibility:hidden">
+      <div style="width:100%; height:230px; background:rgba(51, 51, 51, 0.9)"></div>
+      <div style="width:100%; height:100%; background:rgba(255, 255, 255, 0.9)">
+        <div style="width:150px; height:auto; margin:0 auto;">
+          <div id="floatingCirclesG">
+            <div class="f_circleG" id="frotateG_01"></div>
+            <div class="f_circleG" id="frotateG_02"></div>
+            <div class="f_circleG" id="frotateG_03"></div>
+            <div class="f_circleG" id="frotateG_04"></div>
+            <div class="f_circleG" id="frotateG_05"></div>
+            <div class="f_circleG" id="frotateG_06"></div>
+            <div class="f_circleG" id="frotateG_07"></div>
+            <div class="f_circleG" id="frotateG_08"></div>
+          </div>
+          <p style="text-align:center; color:#4d4d4d;">Fetching Data.</p>
+        </div>
+      </div>
+    </div>
+
+    <ul style="position:absolute; top:25px; left:25px; list-style:none;">
+
+      <li class="sb-close"><a class="btnWhiteText" href="javascript:void(0);" onclick="Map.CloseRightPanel()">x Close</a></li>
+    </ul>
+    <div id="divRightPanel">
+
+    </div>
+
+
+
+  </div><!-- sb-slidebar sb-right -->
+  <!--Left Tools Panel -->
+  <div id="mapPanels" class="sb-slidebar sb-left sb-style-overlay">
+
+    <ul style="position:absolute; top:15px; right:15px; list-style:none;">
+      <li class="sb-close"><a class="btnWhiteText" href="javascript:void(0);" onclick="Map.CloseFilterPanel()">x Close</a></li>
+    </ul>
+    <br /><br />
+
+    <div id="divLeftPanel">
+      <div id="leftPanelLoader">LOADING...</div>
+    </div>
+  </div>
+
+
+
+</body>
+
+<!-- Mirrored from www.crimemapping.com/map by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Dec 2018 08:34:34 GMT -->
+</html>
+
+

@@ -1,0 +1,1883 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+.clear {
+	clear:both;
+}
+
+input::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+input::-ms-clear {
+   display: none;
+ }
+
+/*| PAGE LAYOUT |*/
+
+html, body {
+  height: 100%;
+  width: 100%;
+  cursor: default;
+  font: normal 100%/1.4 sans-serif;
+  min-height:768px;
+}
+
+#sb-site, #divReportPage, #divAlertsSignUp {
+  
+  min-height: 600px;
+  height: 100%;
+  min-width: 1000px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  background: #CCC;
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  right: 0;
+}
+
+#pgHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height:50px;
+  overflow: hidden;
+  background: #000;
+  z-index: 2;
+  color:#FFF;
+  text-align:left;
+}
+
+#pgHeaderReportCharts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height:75px;
+  overflow: hidden;
+  background: #000;
+  z-index: 2;
+  color:#FFF;
+  text-align:left;
+}
+
+.mapHeaderLogo {
+  margin: 15px 0 0 10px;	
+}
+
+#topToolbar {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  height:50px;
+  overflow: hidden;
+  background: #FFF;
+  -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
+  box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
+  z-index: 91;
+}
+
+#topToolbarAlert {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  height:50px;
+  overflow: hidden;
+  background: #FFF;
+  -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
+  box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
+  z-index: 91;
+  display:none;
+}
+
+#leftToolbar {
+  top:100px;
+  left:0px;	
+  min-height: 600px;
+  height: 100%;
+  width: 75px;
+  position: absolute;
+  overflow: hidden;
+  background: #FFF;
+  -webkit-box-shadow: 1px 0px 8px 0px rgba(0,0,0,0.4);
+  -moz-box-shadow: 1px 0px 8px 0px rgba(0,0,0,0.4);
+  box-shadow: 1px 0px 8px 0px rgba(0,0,0,0.4);
+  transform-style:flat;
+  z-index: 90;
+}
+
+#rightPanel{
+    opacity:.97;
+}
+
+#footWrapper {
+  z-index: 1;
+  height: 50px;
+  min-width: 940px;
+  position: absolute;
+  left: 75px;
+  right: 0px;
+  bottom: 0px;
+  background: #C00;
+}
+
+#map{
+    z-index:0;
+}
+
+#mapTools {
+  position:absolute;
+  bottom:18px;
+  left:96px;
+  z-index:3;
+  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+}
+
+#baseMaps {
+    position: absolute;
+    bottom: 18px;
+    left: 160px;
+    z-index: 3;
+    text-align: left;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+  }
+
+#measurementInfo {
+    position: absolute;
+    bottom: 70px;
+    left: 160px;
+    height: 80px;
+    width: 194px;
+    z-index: 3;
+    background-color: #FFF;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+    visibility:hidden;
+}
+#measurementLabel {
+    margin: 10px 0 10px 10px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #4d4d4d;
+    float: left;
+}
+
+#measurementValue {
+    margin: 10px 0 0 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #4d4d4d;
+    float: left;
+}
+
+.esriControlsBR {
+  z-index:1;
+}
+
+a.agencyInfo {
+  color:#ff3300;
+  text-decoration:none;	
+  font-weight:bold;
+}
+
+a.agencyInfo:hover {
+  color:#f98169;	
+  text-decoration:none;
+}
+
+a.btnBlueText {
+  color:#007aff;
+  text-decoration:none;	
+  font-weight:bold;
+}
+
+a.btnBlueText:hover {
+  color:#4dabff;	
+  text-decoration:none;
+}
+
+a.btnBlueText:active {
+  color:#4d4d4d;	
+  text-decoration:none;
+}
+
+a.btnOrangeText {
+  color:#ff3300;
+  text-decoration:none;	
+  font-size:15px;
+}
+
+a.btnOrangeText:hover {
+  color:#fe8668;	
+  text-decoration:none;
+}
+
+a.btnOrangeText:active {
+  color:#ff9c83;	
+  text-decoration:none;
+}
+
+a.btnDisabledText {
+  color:#4d4d4d;
+  text-decoration:none;	
+  font-weight:bold;
+  cursor:default;
+}
+
+a.btnWhiteText {
+  color:#fff;
+  text-decoration:none;	
+}
+
+a.btnWhiteText:hover {
+  color:#c7c7c7;	
+  text-decoration:none;
+}
+
+a.btnWhiteTextUnderline {
+  color:#fff;
+  text-decoration:underline;	
+}
+
+a.btnWhiteTextUnderline:hover {
+  color:#c7c7c7;	
+  text-decoration:none;
+}
+
+a.btnGrayText {
+  color:#656565;
+  text-decoration:none;	
+}
+
+a.btnGrayText:hover {
+  color:#c7c7c7;	
+  text-decoration:none;
+}
+
+.searchIcon {
+  display: block;
+  height: 25px;
+  width: 30px;
+  float: left;
+  margin: 14px -8px 0px 5px;
+}
+
+a.viewHistory:hover {
+  background-position: 0 -25px;
+}
+
+a.viewHistory:active {
+  background-position: 0 -50px;
+}
+
+a.viewReport {
+       display: block;
+       background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/btn-view-list.svg) no-repeat;
+       height: 21px;
+       width: 29px;
+}
+
+a.viewReport:hover {
+       background-position: 0 -21px;
+}
+
+a.closeList {
+       display: block;
+       background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/btn-close-list.svg) no-repeat;
+       height: 25px;
+       width: 25px;
+}
+
+a.closeList:hover {
+       background-position: 0 -25px;
+}
+
+a.filterSelected {
+    background-position: 0 -150px !important;
+}
+
+a.filterHover {
+    background-position: 0 -75px !important;
+}
+
+a.viewSummary {
+       display: block;
+       background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/btn-view-summary.svg) no-repeat;
+       height: 75px;
+       width: 75px;
+}
+
+a.viewWhat {
+       display: block;
+       background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/btn-view-what.svg) no-repeat;
+       height: 75px;
+       width: 75px;
+}
+
+a.viewWhere {
+       display: block;
+       background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/btn-view-where.svg) no-repeat;
+       height: 75px;
+       width: 75px;
+}
+
+a.viewWhen {
+       display: block;
+       background: url('https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/btn-view-when.svg');
+       height: 75px;
+       width: 75px;
+       text-indent:100%;
+       white-space:nowrap;
+       overflow:hidden;
+}
+
+a.viewReportToolbar {
+       display: block;
+       background: url('https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/btn-view-report.svg');
+       height: 75px;
+       width: 75px;
+       text-indent:100%;
+       white-space:nowrap;
+       overflow:hidden;
+}
+
+a.viewReportToolbarHover {
+       background-position: 0 -75px;
+}
+
+a.viewReportToolbarDisabled {
+       background-position: 0 -150px;
+       cursor:default;
+}
+
+a.viewChartsToolbar {
+       display: block;
+       background: url('https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/btn-view-charts.svg');
+       height: 75px;
+       width: 75px;
+       text-indent:100%;
+       white-space:nowrap;
+       overflow:hidden;
+}
+
+a.viewChartsToolbarHover {
+       background-position: 0 -75px;
+}
+
+a.viewChartsToolbarDisabled {
+       background-position: 0 -150px;
+       cursor:default;
+}
+
+a.printMapToolbar {
+       display: block;
+       background: url('https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/btn-print.svg');
+       height: 75px;
+       width: 75px;
+       text-indent:100%;
+       white-space:nowrap;
+       overflow:hidden;
+}
+
+a.printMapToolbar:hover {
+       background-position: 0 -75px;
+}
+
+a.printMapToolbar:active {
+       background-position: 0 -75px;
+}
+
+
+
+a.distanceTool {
+       display: block;
+       background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/btn-distance-tool.svg) no-repeat;
+       height: 75px;
+       width: 75px;
+}
+
+a.distanceTool:hover {
+       background-position: 0 -75px;
+}
+
+a.distanceToolActive {
+       background-position: 0 -75px;
+}
+
+a.proximityTool {
+       display: block;
+       background: url(../images/map/btn-proximity-tool.png) no-repeat;
+       height: 75px;
+       width: 75px;
+}
+
+a.proximityTool:hover {
+       background-position: 0 -75px;
+}
+
+a.childsafezonesTool {
+       display: block;
+       background: url(../images/map/btn-childsafezones-tool.png) no-repeat;
+       height: 75px;
+       width: 75px;
+}
+
+a.childsafezonesTool:hover {
+       background-position: 0 -75px;
+}
+
+a.childsafezonesTool:active {
+       background-position: 0 -150px;
+}
+
+a.zoomIn {
+       display: block;
+       background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/btn-zoom-in.svg) no-repeat;
+       height: 25px;
+       width: 25px;
+}
+
+a.zoomIn:hover {
+       background-position: 0 -25px;
+}
+
+a.zoomOut {
+       display: block;
+       background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/btn-zoom-out.svg) no-repeat;
+       height: 25px;
+       width: 25px;
+}
+
+a.zoomOut:hover {
+       background-position: 0 -25px;
+}
+
+a.distanceToolMap {
+       display: block;
+       background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/btn-measure-distance.svg) no-repeat;
+       height: 25px;
+       width: 25px;
+}
+
+a.distanceToolMap:hover {
+       background-position: 0 -25px;
+}
+
+a.distanceToolMap:active {
+       background-position: 0 -50px;
+}
+
+/*a.distanceToolMapActive {
+       background-position: 0 -39px;
+}*/
+
+a.myLocation {
+       display: block;
+       background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/btn-my-location.svg) no-repeat;
+       height: 25px;
+       width: 25px;
+}
+
+a.myLocation:hover {
+       background-position: 0 -25px;
+}
+
+a.btnPinPanel {
+       display: block;
+       background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/btn-pin-panel.svg) no-repeat;
+       height: 21px;
+       width: 21px;
+       margin: 0 0 10px 0;
+}
+
+a.btnPinPanel:hover {
+       background-position: 0 -21px;
+}
+
+a.btnPinPanel:active {
+       background-position: 0 -42px;
+}
+
+a.PinPanelSelected{
+    background-position: 0 -42px;
+}
+
+a.tweetThis {
+  display: block;
+  background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/share-sprite.svg) no-repeat;
+  height: 25px;
+  width: 25px;
+  float: left;
+}
+
+a.tweetThis:hover {
+  background-position: 0 -25px;
+}
+
+a.facebookThis {
+  display: block;
+  background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/share-sprite.svg) no-repeat;
+  height: 25px;
+  width: 25px;
+  float: left;
+  background-position:-25px 0;
+}
+
+a.facebookThis:hover {
+  background-position:-25px -25px;
+}
+
+a.textThis {
+  display: block;
+  background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/share-sprite.svg) no-repeat;
+  height: 25px;
+  width: 25px;
+  float: left;
+  background-position:-50px 0;
+}
+
+a.textThis:hover {
+  background-position:-50px -25px;
+}
+
+a.emailThis {
+  display: block;
+  background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/share-sprite.svg) no-repeat;
+  height: 25px;
+  width: 25px;
+  float: left;
+  background-position:-75px 0;
+}
+
+a.emailThis:hover {
+  background-position:-75px -25px;
+}
+
+a.copyThis {
+  display: block;
+  background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/share-sprite.svg) no-repeat;
+  height: 25px;
+  width: 25px;
+  float: left;
+  background-position:-100px 0;
+}
+
+a.copyThis:hover {
+  background-position:-100px -25px;
+}
+
+a.darkGray {
+    color:#333333;
+    display:inline;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.shareMap {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  margin: 10px 0 0 0;
+  float: left;
+  background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/share.svg) no-repeat;
+  padding: 8px 25px 8px 55px;
+  background-position: 20px 7px;
+  -moz-border-radius: 10px;	
+  -webkit-border-radius: 10px;
+  background-size:20px;
+}
+
+.shareMap:hover {
+  color:#fff;
+  text-decoration: none;
+  background-color:rgba(77,77,77,1.00);
+}
+
+.shareMap:active {
+  background-color:rgba(99,99,99,1.00);
+}
+
+.locationgo {
+    background: #2DC74A none repeat scroll 0% 0%;
+    color: #FFF;
+    font-size: 17px;
+    padding:3px 6px 1px 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 13px 0px 0px 35px;
+    float: left;
+}
+
+.locationgo:hover {
+  background:#76cc82;
+  text-decoration: none;
+}
+
+.locationgo:active {
+  background:#44c156;
+}
+
+.clearSearch {
+position:absolute; 
+top:20px; 
+left:386px; 
+z-index:999;
+}
+
+.clearHowCloseSearch {
+left: 6px; top: 2px; position: relative; z-index: 999;
+}
+
+
+a.btnClearSearch {
+  display: block;
+  background: url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/btn-clear-search.svg) no-repeat;
+  height: 12px;
+  width: 12px;	
+}
+
+a.btnClearSearch:hover {
+   background-position: 0 -12px;	
+}
+
+a.btnClearSearch:active {
+   background-position: 0 0;	
+}
+
+ul.loginSignup {
+  position:relative; 
+  float:right; 
+  list-style-type:none;
+  right:85px;
+}
+
+.loginSignup li {
+  display:inline-block; 
+  color:#fff;	
+  vertical-align:middle;
+  height:25px;
+  margin:0 5px;
+}
+
+.signupAccount {
+  color: #ffffff;
+  font-size: 15px;
+  background: #ff3300;
+  padding:4px 15px 4px;
+  text-decoration: none;
+  text-transform:uppercase;
+}
+
+.signupAccount:hover {
+  background: #ff6a4d;
+  text-decoration: none;
+}
+
+.signupAccount:active {
+  background: #ff4217;
+}
+
+
+.blueButton {
+  color: #ffffff;
+  font-size: 15px;
+  background: #007AFF;
+  padding:7px 10px;
+  text-decoration: none;
+}
+
+.blueButton:hover {
+  background: #2296FF;
+  text-decoration: none;
+}
+
+.blueButton:active {
+  background: #128FFF;
+}
+
+
+.printMap {
+  color: #ffffff;
+  font-size: 15px;
+  background: #0a1867;
+  padding:4px 15px 4px;
+  text-decoration: none;
+  text-transform:uppercase;
+}
+
+.printMap:hover {
+  background: #1126ca;
+  text-decoration: none;
+}
+
+.login {
+  color: #fbb03b;
+  font-size: 18px;
+  padding: 5px 30px 5px 30px;
+  text-decoration: none;
+  text-transform:uppercase;
+}
+
+.login:hover {
+  color:#ffca85;
+  text-decoration: none;
+}
+
+.login:active {
+  color:#f9b04e;
+}
+
+ul.mapNavigation {
+	list-style:none;
+}
+
+.mapNavigation li {
+	margin:10px;
+}
+
+
+ul.reportList {
+	position:absolute; 
+	top:11px; 
+	right:11px; 
+	list-style:none;
+}
+
+.reportList li {
+  display:inline-block; 
+  color:#fff;	
+  vertical-align:middle;
+  height:25px;
+  margin:0 10px;
+}
+
+ul.secondaryNav {
+  position:absolute; 
+  bottom:120px;	
+}
+
+.secondaryNav li {
+  margin:7px 0 7px 10px;	
+  text-align:left;
+}
+
+ul.secondaryNav a {
+  text-decoration:none;
+  color:#4d4d4d;
+  font-weight:bold;
+  font-size:15px;
+}
+
+ul.secondaryNav a:hover {
+  text-decoration:none;
+  color:#999999;
+}
+
+ul.secondaryNav a:visited {
+  text-decoration:none;
+  color:#4d4d4d;
+}
+
+ul.queryBuilder {
+  	z-index:10;
+}
+
+.queryBuilder li {
+  margin: 0;
+  padding:0;
+  list-style: none;		
+}
+
+
+ul.groupingSortingList {
+  top:100px;
+  position:absolute;	
+}
+
+.groupingSortingList li {
+  display:inline-block;
+  border-right:2px solid #fff;
+  padding:0 17px;
+  vertical-align: top;
+  height: 23px;
+}
+
+.groupingSortingList li:last-child {
+  border-right:0px;
+}
+
+.groupingSortingList a {
+  color:#FFF;
+  text-decoration:none;	
+}
+
+.groupingSortingList a:hover {
+  color:#d8d8d8;
+  text-decoration:none;	
+}
+
+.groupingSortingList a:active {
+  color:#ff3300;
+  font-weight:bold;	
+}
+
+a.flipList {
+  display: block;
+  background: url(../images/map/btn-flip-list.png) no-repeat;
+  height: 22px;
+  width: 19px;	
+}
+
+a.flipList:hover {
+   background-position: 0 -22px;	
+}
+
+a.flipList:active {
+   background-position: 0 -44px;	
+}
+
+.recordDetailsLinks li{
+    padding:5px 0;
+    vertical-align:middle;
+}
+
+.recordDetailsShare li {
+  display:inline-block; 
+  margin:0 15px 0 0;
+  vertical-align:middle;
+}
+
+.recordDetailsHowCloseInputKendo {
+    width:285px;    
+}
+
+
+hr.queryBuilderDivider {
+  display: block; 
+  height: 1px;
+  border: 0; 
+  border-top: 1px solid #cccccc;
+  margin: 8px; 
+  padding: 0;
+}
+
+hr.panelDivider {
+  display: block; 
+  height: 1px;
+  border: 0; 
+  border-top: 1px solid #808080;
+  margin: 10px 0; 
+  padding: 0;
+}
+
+hr.panelDividerLight {
+  display: block; 
+  height: 1px;
+  border: 0; 
+  border-top: 1px solid #e0e0e0;
+  margin: 10px 0; 
+  padding: 0;
+}
+
+.dateRange {
+  color:#666666;
+  font-weight:bold;
+  position: absolute;
+  top: 21px;
+  right: 120px;
+  font-size: .8em;
+}
+
+.recordCount {
+    color: #FFF;
+    font-weight: bold;
+    position: absolute;
+    top: 13px;
+    right: 455px;
+    font-size: 0.8em;
+    background: #007AFF none repeat scroll 0% 0%;
+    padding: 4px 10px;
+}
+
+h1.yellow {
+  margin: .5em 0;
+  color:#fbd13b;
+  font-weight:300;
+}
+
+h1.orange {
+  color: #fbb03b;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+h1.orangeMedium {
+  color: #fbb03b;
+  font-weight: 300;
+  font-size: 1.3em;
+}
+
+h1.orangeSmall {
+  color: #fbb03b;
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+p.darkGray {
+    color:#333333;
+    display:inline;
+    font-weight:bold;
+}
+
+p.mediumGray {
+    color:#8e8e93;
+    display:inline;
+}
+
+#summaryPanel {
+    z-index:1;
+  margin:0px 15px 0 13px;	
+  padding: 0px 10px 0px 10px;
+}
+
+#whatPanel {
+  margin:0px 15px 0 13px;	
+  padding: 0px 10px 0px 10px;
+}
+
+#whenPanel {
+  margin:0px 15px 0 13px;
+  padding: 0px 10px 0px 10px;
+}
+
+.whenCheckBox
+{
+    margin-right:10px; 
+    float:right;
+}
+
+#wherePanel {
+  margin:0px 15px 0 13px;
+  padding: 0px 10px 0px 10px;
+}
+
+
+/* ------------------------------------------
+  LOCATION SEARCH STYLES
+--------------------------------------------- */
+
+
+.locationSearch {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 25%;
+  padding: 20px 20px 13px 20px;
+  border: 0;
+  color: #4d4d4d;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(252,252,252,1);
+  float:left;
+  margin:0;
+  font-size:16px;
+}
+
+#locationSearch-list{
+    /*margin-top:3px;*/
+}
+
+
+/* ------------------------------------------
+  FORM STYLES
+--------------------------------------------- */
+
+.queryBuilderInput {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 95%;
+  padding: 14px 0px 10px 15px;
+  border: 0;
+  color: #4d4d4d;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(252,252,252,1);
+}
+
+.queryBuilderComboBox {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 95%;
+  padding: 14px 0px 10px 15px;
+  border: 0;
+  color: #4d4d4d;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(252,252,252,1);
+  font-weight:bold;
+  font-size:14px;
+}
+
+
+.btnApply {
+  color: #ffffff;
+  font-size: 16px;
+  background: #39b54a;
+  padding: 7px 25px 6px 25px;
+  text-decoration: none;
+  text-transform:uppercase;
+}
+
+.btnApply:hover {
+  background: #68c171;
+  text-decoration: none;
+}
+
+.btnApply:active {
+  background: #39b54a;
+}
+
+.btnClear {
+  color: #ffffff;
+  font-size: 16px;
+  background: #ff0000;
+  padding: 7px 25px 6px 25px;
+  text-decoration: none;
+  text-transform:uppercase;
+}
+
+.btnClear:hover {
+  background: #ff3333;
+  text-decoration: none;
+}
+
+.btnClear:active {
+  background: #ff0000;
+}
+
+input[type=checkbox].css-checkbox {
+	position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:22px;
+	height:17px; 
+	display:inline-block;
+	line-height:19px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:15px;
+	vertical-align:middle;
+	cursor:pointer;
+    color:#4d4d4d;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	background-position: 0 -17px;
+}
+
+label.css-label {
+	background-image:url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/checkbox.svg);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+
+input[type=checkbox].redCheck-checkbox {
+	position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+}
+
+input[type=checkbox].redCheck-checkbox + label.redCheck-label {
+	padding-left:22px;
+	height:17px; 
+	display:inline-block;
+	line-height:19px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:15px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+input[type=checkbox].redCheck-checkbox:checked + label.redCheck-label {
+	background-position: 0 -17px;
+}
+
+label.redCheck-label {
+	background-image:url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/redcheckbox.svg);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+input[type=checkbox].whiteCheck-checkbox {
+	position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+}
+
+input[type=checkbox].whiteCheck-checkbox + label.whiteCheck-label {
+	padding-left:22px;
+	height:17px; 
+	display:inline-block;
+	line-height:19px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:15px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+input[type=checkbox].whiteCheck-checkbox:checked + label.whiteCheck-label {
+	background-position: 0 -17px;
+}
+
+label.whiteCheck-label {
+	background-image:url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/whitecheckbox.svg);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.shareMapInput {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 80%;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid #e6e6e6;
+    color: #4d4d4d;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgba(252,252,252,1);
+}
+
+.recordDetails{
+    background:#333;
+    height:230px;
+
+}
+
+.recordDetailsHeader {
+	position: absolute;
+    top: 95px;
+    left: 25px;
+    width: 88%;
+}
+
+.recordDetailsHeaderButtons {
+    position:absolute; 
+    right:25px; 
+    top:70px;
+}
+
+.recordDetailsBody {
+    margin:25px 0 0 0;
+    padding:0 25px;
+}
+
+.headerSymbol {
+  width:60px; 
+  height:60px; 
+  float:left;	
+}
+
+.offenderPhoto {
+  width:125px; 
+  height:auto; 
+  background-image:url(https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/no-photo.svg);
+}
+
+.headerTypeName {
+    font-size: 20px;
+    float: right;
+    margin: 33px 0 0 0;
+}
+
+.headerAddress {
+  float:right;
+  text-align:right;
+  font-size:13px;
+}
+
+.headerDateTime {
+  float:right;
+  text-align:right;
+  font-size:13px;
+}
+
+.baseMapsComboBox {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 6px 10px;
+  color: #4d4d4d;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(252,252,252,1);
+  font-weight:bold;
+  font-size:14px;
+}
+
+.mapUnitsComboBox {
+  border: 2px solid #e6e6e6;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  color: #4d4d4d;
+  background: rgba(252,252,252,1);
+  font-weight:bold;
+  text-align: left;
+  font-size:14px;
+}
+
+#ddlMapUnits-list, #ddlBasemaps-list {
+    width: 194px !important;
+}
+
+.noDataModal{
+	width: 750px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin: -250px 0 0 -375px;
+    padding:20px 10px 0px 10px;
+    background-color: #1B1B1B;
+    border: 0;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.successModal{
+	max-height: calc(100% - 50px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:95%;
+    max-width:600px;
+    background-color: #1B1B1B;
+    border: 0;
+    border-radius: 15px;
+    text-align: center;
+    color:#dddddd;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.9);
+}
+
+/* Offender Modal popup */
+.offenderDisclaimerModal{
+	max-height: calc(100% - 50px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:95%;
+    max-width:600px;
+    background-color: #1B1B1B;
+    border: 0;
+    border-radius: 15px;
+    text-align: center;
+    color:#dddddd;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.9);
+}
+
+p.signup {
+  width: 90%;
+  margin: 0 auto;
+  font-style:italic;
+  color:#FFF;
+}
+
+.initializeContentModal{
+	max-height: calc(100% - 50px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:95%;
+    max-width:600px;
+    background-color: #1B1B1B;
+    border: 0;
+    border-radius: 15px;
+    text-align: center;
+    color:#dddddd;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.9);
+}
+
+.loginSignupModal{
+	width: 460px;
+    height: 426px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -213px 0 0 -230px;
+    background-color: #1B1B1B;
+    border: 0;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+.greenSubmit {
+  color: #ffffff;
+  font-size: 18px;
+  background: #2dc74a;
+  padding: 7px 30px 7px 30px;
+  text-decoration: none;
+  text-transform:uppercase;
+  border:0;
+}
+
+.greenSubmit:hover {
+  background: #74d183;
+  text-decoration: none;
+}
+
+.greenSubmit:active {
+  background: #2dc74a;
+}
+
+.redCancel {
+  color: #ffffff;
+  font-size: 18px;
+  background: #ff3300;
+  padding: 7px 30px 7px 30px;
+  text-decoration: none;
+  text-transform:uppercase;
+}
+
+.redCancel:hover {
+  background: #ff6a4d;
+  text-decoration: none;
+}
+
+.redCancel:active {
+  background: #ff4217;
+}
+
+a.red {
+  color: #ff3300;
+  text-decoration:none;
+}
+
+a.red:hover {
+  text-decoration:none;	
+  color:#ff6a4d;
+}
+
+/**Remove border in kendo list view controls**/
+.k-listview {
+    padding: 0;
+    border: none;
+}
+
+
+#modalBgTransparency{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    background: rgba(0,0,0,0.7);
+    z-index:99;
+}
+#modalDialog{
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    position:fixed;
+    z-index:101;
+    margin:0;
+}
+
+
+/**Off Canvas Menu Styles**/
+/* Navigation Menu - Background */
+.navigation {
+  /* critical sizing and position styles */
+  /* width: 100%; */
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* left: 0; */
+  z-index: 0;
+  
+  /* non-critical appearance styles */
+  list-style: none;
+  background: #111;
+}
+
+/* Navigation Menu - List items */
+.nav-item {
+  /* non-critical appearance styles */
+  width: 200px;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #000;
+}
+
+.nav-item a {
+  /* non-critical appearance styles */
+  display: block;
+  padding: 1em;
+  background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.2s, background 0.5s;
+}
+
+.nav-item a:hover {
+  color: #c74438;
+  background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(255,51,0,0.65) 100%);
+}
+
+
+
+/* Nav Trigger */
+.nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+  /* critical positioning styles */
+  position: absolute;
+  right: 22px; top: 14px;
+  z-index: 99;
+  
+  /* non-critical apperance styles */
+  height: 25px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/btn-reveal-menu-light.svg");
+  background-size: contain;
+}
+
+/* Make the Magic Happen */
+.nav-trigger + label, #sb-site, #divAlertsSignUp {
+  transition: right 0.2s;
+}
+
+.nav-trigger:checked + label {
+  right: 215px;
+}
+
+.nav-trigger:checked ~ #sb-site {
+
+}
+
+
+body {
+    /* Without this, the body has excess horizontal scroll when the menu is open 
+  overflow-x: hidden;*/
+}
+
+.esriAttribution{
+    background-color:transparent;
+}
+
+
+.arrow_box {
+		position: absolute;
+    z-index:9999;
+    top:500px;
+    left:500px;
+	background: #FFFFFF;
+	border: 1px solid #999999;
+    padding:15px;
+    text-align:left;
+    -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
+}
+.arrow_box:after, .arrow_box:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #FFFFFF;
+	border-width: 15px;
+	margin-left: -15px;
+}
+.arrow_box:before {
+	border-color: rgba(153, 153, 153, 0);
+	border-top-color: #999999;
+	border-width: 16px;
+	margin-left: -16px;
+}
+
+
+
+.recordDetailsLoader {
+width:100%; 
+height:100%; 
+/*background:rgba(51, 51, 51, 0.9);*/
+position:absolute; 
+z-index:9999;
+overflow:hidden;
+}
+
+#floatingCirclesG{
+	position:relative;
+	width:125px;
+	height:125px;
+	margin:auto;
+	transform:scale(0.6);
+		-o-transform:scale(0.6);
+		-ms-transform:scale(0.6);
+		-webkit-transform:scale(0.6);
+		-moz-transform:scale(0.6);
+}
+
+.f_circleG{
+	position:absolute;
+	background-color:rgb(255,255,255);
+	height:22px;
+	width:22px;
+	border-radius:12px;
+		-o-border-radius:12px;
+		-ms-border-radius:12px;
+		-webkit-border-radius:12px;
+		-moz-border-radius:12px;
+	animation-name:f_fadeG;
+		-o-animation-name:f_fadeG;
+		-ms-animation-name:f_fadeG;
+		-webkit-animation-name:f_fadeG;
+		-moz-animation-name:f_fadeG;
+	animation-duration:0.782s;
+		-o-animation-duration:0.782s;
+		-ms-animation-duration:0.782s;
+		-webkit-animation-duration:0.782s;
+		-moz-animation-duration:0.782s;
+	animation-iteration-count:infinite;
+		-o-animation-iteration-count:infinite;
+		-ms-animation-iteration-count:infinite;
+		-webkit-animation-iteration-count:infinite;
+		-moz-animation-iteration-count:infinite;
+	animation-direction:normal;
+		-o-animation-direction:normal;
+		-ms-animation-direction:normal;
+		-webkit-animation-direction:normal;
+		-moz-animation-direction:normal;
+}
+
+#frotateG_01{
+	left:0;
+	top:51px;
+	animation-delay:0.2895s;
+		-o-animation-delay:0.2895s;
+		-ms-animation-delay:0.2895s;
+		-webkit-animation-delay:0.2895s;
+		-moz-animation-delay:0.2895s;
+}
+
+#frotateG_02{
+	left:15px;
+	top:15px;
+	animation-delay:0.386s;
+		-o-animation-delay:0.386s;
+		-ms-animation-delay:0.386s;
+		-webkit-animation-delay:0.386s;
+		-moz-animation-delay:0.386s;
+}
+
+#frotateG_03{
+	left:51px;
+	top:0;
+	animation-delay:0.4825s;
+		-o-animation-delay:0.4825s;
+		-ms-animation-delay:0.4825s;
+		-webkit-animation-delay:0.4825s;
+		-moz-animation-delay:0.4825s;
+}
+
+#frotateG_04{
+	right:15px;
+	top:15px;
+	animation-delay:0.589s;
+		-o-animation-delay:0.589s;
+		-ms-animation-delay:0.589s;
+		-webkit-animation-delay:0.589s;
+		-moz-animation-delay:0.589s;
+}
+
+#frotateG_05{
+	right:0;
+	top:51px;
+	animation-delay:0.6855s;
+		-o-animation-delay:0.6855s;
+		-ms-animation-delay:0.6855s;
+		-webkit-animation-delay:0.6855s;
+		-moz-animation-delay:0.6855s;
+}
+
+#frotateG_06{
+	right:15px;
+	bottom:15px;
+	animation-delay:0.782s;
+		-o-animation-delay:0.782s;
+		-ms-animation-delay:0.782s;
+		-webkit-animation-delay:0.782s;
+		-moz-animation-delay:0.782s;
+}
+
+#frotateG_07{
+	left:51px;
+	bottom:0;
+	animation-delay:0.8785s;
+		-o-animation-delay:0.8785s;
+		-ms-animation-delay:0.8785s;
+		-webkit-animation-delay:0.8785s;
+		-moz-animation-delay:0.8785s;
+}
+
+#frotateG_08{
+	left:15px;
+	bottom:15px;
+	animation-delay:0.975s;
+		-o-animation-delay:0.975s;
+		-ms-animation-delay:0.975s;
+		-webkit-animation-delay:0.975s;
+		-moz-animation-delay:0.975s;
+}
+
+
+
+@keyframes f_fadeG{
+	0%{
+		background-color:rgb(0,0,0);
+	}
+
+	100%{
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-o-keyframes f_fadeG{
+	0%{
+		background-color:rgb(0,0,0);
+	}
+
+	100%{
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-ms-keyframes f_fadeG{
+	0%{
+		background-color:rgb(0,0,0);
+	}
+
+	100%{
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-webkit-keyframes f_fadeG{
+	0%{
+		background-color:rgb(0,0,0);
+	}
+
+	100%{
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-moz-keyframes f_fadeG{
+	0%{
+		background-color:rgb(0,0,0);
+	}
+
+	100%{
+		background-color:rgb(255,255,255);
+	}
+}
+
+
+/** Info Window Styles **/
+
+.esriPopup, .esriPopupWrapper, .esriPopup .titlePane, .esriPopup .actionsPane{
+    border-radius:0px;
+    -webkit-border-radius: 0px;
+    background-color:#ffffff;
+}
+
+.esriPopup .contentPane{
+    color: #fbb03b;
+    font-weight:300;
+    font-size:1.3em;
+    font-family:"Muli",sans-serif;
+    background-color:#ffffff;
+    padding:0px 6px 26px 26px;
+}
+
+.esriPopup .titlePane{
+    background-color:#ffffff;
+    padding:10px 10px 0px 10px;
+}
+
+.titleButton, .close{
+    font-family:"Muli",sans-serif;
+    color:#656565;
+    text-decoration:none;
+}
+
+.esriPopup .close.titleButton{
+    background:url("https://ocpd-content.azureedge.net/cdn/styles/mini/images/map/btn-Close-info.svg") no-repeat;
+    width:55px;
+    height:18px;
+
+}
+
+.esriPopup .actionsPane{
+    display:none;
+}
+
+
+.statusAgencyFilter{
+    width:100%; height:30px; background:rgba(5,140,245,0.8); text-align:center; position:absolute; z-index:5;
+    -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+}
+
+.statusMaxRecords{
+    width:100%; height:30px; background:rgba(231,76,60,0.8); text-align:center; position:absolute; z-index:5;
+    -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+}
+
+.statusZoomIn{
+    width:100%; height:30px; background:rgba(39,174,96,0.8); text-align:center; position:absolute; z-index:5;
+    -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+}
+
+.statusNoDataProvided{
+    width:100%; height:30px; background:rgba(77,79,83,0.8); text-align:center; position:absolute; z-index:5;
+    -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+}
+
+.statusNoDataFound{
+    width:100%; height:30px; background:rgba(44,62,80,0.8); text-align:center; position:absolute; z-index:5;
+    -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+}
+
+.statusBarHelp {
+    color:#FFF; display:block; position:absolute; top:2px; right:97px;
+}
+
+.statusSexOffenderData {
+    width:100%; height:30px; background:rgba(158,0,93,0.8); text-align:center; position:absolute; z-index:5;
+    -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.4);
+}
+
+.statusBarMessage {
+    color:#FFF; margin-left:-75px; display:block;
+}
+
+.scaleDisplay {
+    background-color:white; width:200px; height:50px; position:absolute; 
+    bottom:20px; left:30%; border-radius: 3px 3px; border-color: rgb(230,230,230); 
+    border-style:solid; border-width:1px;
+}
+
+@media screen and (min-width: 950px) {
+    
+    .profileColumnLeft, .profileColumnLeftSignup{ 
+      float: left; 
+      width: 33%; 
+    }
+
+    .profileColumnLeftOneThird{ 
+      float: left; 
+      width: 33%; 
+      border-right: 1px solid #e6e6e6;
+    }
+
+    .profileColumnRight, .profileColumnRightSignup{ 
+      float: right; 
+      width: 33%; 
+    }
+
+    .profileColumnRightTwoThirds{ 
+      float: right; 
+      width: 66%; 
+    }
+
+    .profileColumnCenter, .profileColumnCenterSignup{ 
+      display: inline-block; 
+      width: 33%; 
+      border-right: 1px solid #e6e6e6;
+      border-left: 1px solid #e6e6e6;
+    }
+
+    .myAlertsSubHeader {
+      width:33%;
+      float:left;
+      border-right: 1px solid #e6e6e6;
+      border-bottom: 0;
+    }
+
+    .myAlertsAlertTitle {
+        width: 66%;
+        float: right;
+    }
+}
