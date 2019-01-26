@@ -1,22 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src",
-    "\\src\\app",
-    "\\src\\app\\header",
-    "\\src\\app\\home",
-    "\\src\\assets",
-    "\\src\\assets\\ocpd-content.azureedge.net",
-    "\\src\\assets\\ocpd-content.azureedge.net\\cdn",
-    "\\src\\assets\\ocpd-content.azureedge.net\\cdn\\images",
-    "\\src\\assets\\ocpd-content.azureedge.net\\cdn\\images\\favicon",
-    "\\src\\assets\\ocpd-content.azureedge.net\\cdn\\scripts",
-    "\\src\\assets\\ocpd-content.azureedge.net\\cdn\\scripts\\mini",
-    "\\src\\assets\\ocpd-content.azureedge.net\\cdn\\scripts\\mini\\2.4.1.0",
-    "\\src\\assets\\ocpd-content.azureedge.net\\cdn\\scripts\\mini\\2.4.1.0\\analytics",
-    "\\src\\assets\\ocpd-content.azureedge.net\\cdn\\scripts\\mini\\2.4.1.0\\kendo",
-    "\\src\\assets\\ocpd-content.azureedge.net\\cdn\\scripts\\mini\\2.4.1.0\\kendo\\2015.2.805"
+    "\\src"
   ],
-  "SelectedNode": "\\src\\app\\app.component.ts",
+  "SelectedNode": "\\tsconfig.json",
   "PreviewInSolutionExplorer": false
 }

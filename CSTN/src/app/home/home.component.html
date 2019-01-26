@@ -1,3 +1,53 @@
-<p>
-  home works!
-</p>
+
+  <section id="home" class="home">
+
+    <!-- Agency Organization Count -->
+    <h1 class="yellow">Start Your Search by Using Either Method Below.</h1>
+
+    <div id="nearLocation">
+      <h1 class="white">Near a Location</h1>
+      <div class="landingInput">
+        <input class="landingInputKendo" id="locationSearch" name="locationSearch" style="font-weight:bold;font-size:14px;" type="text" />
+        <script>
+          jQuery(function () { jQuery("#locationSearch").kendoAutoComplete({ "select": Landing.LocationSuggestSelected, "change": Landing.LocationSuggestTextChanged, "dataSource": { "transport": { "read": { "url": "/Home/GetLocationSuggestions", "data": Landing.LocationSuggestParams }, "prefix": "" }, "serverFiltering": true, "filter": [], "schema": { "errors": "Errors" } }, "dataTextField": "Text", "minLength": 3, "placeholder": "Enter an address, landmark or zip code" }); });
+        </script>
+      </div>
+      <br>
+      <br>
+      <a class="go" href="javascript:void(0);" onclick="Landing.NavigateToMapByLocation()">Go</a>
+    </div>
+    <div id="nearAgency">
+      <h1 class="white">Near an Agency</h1>
+      <!-- Political Boundaries -->
+      <div id="divPoliticalBoundaries">
+        <input class="landingComboBox" id="cbPoliticalBoundaries" name="cbPoliticalBoundaries" type="text" />
+        <script>
+          jQuery(function () { jQuery("#cbPoliticalBoundaries").kendoComboBox({ "select": Landing.PoliticalBoundarySelected, "change": Landing.PoliticalBoundaryChanged, "dataSource": [{ "Name": "Alabama", "ID": 1 }, { "Name": "Arizona", "ID": 3 }, { "Name": "Arkansas", "ID": 4 }, { "Name": "California", "ID": 5 }, { "Name": "Colorado", "ID": 6 }, { "Name": "Connecticut", "ID": 7 }, { "Name": "Delaware", "ID": 8 }, { "Name": "Florida", "ID": 9 }, { "Name": "Georgia", "ID": 10 }, { "Name": "Hawaii", "ID": 11 }, { "Name": "Idaho", "ID": 12 }, { "Name": "Illinois", "ID": 13 }, { "Name": "Iowa", "ID": 15 }, { "Name": "Kentucky", "ID": 17 }, { "Name": "Louisiana", "ID": 18 }, { "Name": "Maine", "ID": 19 }, { "Name": "Massachusetts", "ID": 21 }, { "Name": "Michigan", "ID": 22 }, { "Name": "Mississippi", "ID": 24 }, { "Name": "Montana", "ID": 26 }, { "Name": "Nebraska", "ID": 27 }, { "Name": "Nevada", "ID": 28 }, { "Name": "New Hampshire", "ID": 29 }, { "Name": "New Jersey", "ID": 30 }, { "Name": "New Mexico", "ID": 31 }, { "Name": "North Carolina", "ID": 33 }, { "Name": "Ohio", "ID": 35 }, { "Name": "Oregon", "ID": 37 }, { "Name": "Pennsylvania", "ID": 38 }, { "Name": "Rhode Island", "ID": 39 }, { "Name": "South Carolina", "ID": 40 }, { "Name": "South Dakota", "ID": 41 }, { "Name": "Tennessee", "ID": 42 }, { "Name": "Texas", "ID": 43 }, { "Name": "Utah", "ID": 44 }, { "Name": "Virginia", "ID": 46 }, { "Name": "Washington", "ID": 47 }, { "Name": "Wisconsin", "ID": 49 }], "dataTextField": "Name", "filter": "contains", "dataValueField": "ID", "placeholder": "Step 1: Select a State..." }); });
+        </script>
+      </div>
+
+      <br />
+      <!-- Agencies -->
+      <div id="divAgencies">
+        <input class="landingComboBox" disabled="disabled" id="cbAgencies" name="cbAgencies" type="text" />
+        <script>
+          jQuery(function () { jQuery("#cbAgencies").kendoComboBox({ "select": Landing.AgencyTextSelected, "change": Landing.AgencyTextChanged, "dataTextField": "Name", "dataValueField": "ID", "placeholder": "Step 2: Select an Agency..." }); });
+        </script>
+      </div>
+      <br>
+      <a class="go" href="javascript:void(0);" onclick="Landing.NavigateToMapByAgency()">Go</a>
+    </div>
+
+    <div id="tritechLogo">
+      <a href="http://www.tritech.com/" target="_blank"><img style="border-style: none" src="https://ocpd-content.azureedge.net/cdn/images/TriTech-logo.svg" width="280" height="76" alt="TriTech Software Systems" /></a>
+    </div>
+
+    <div id="scrollHint">
+      <h1 class="white">How CrimeMapping works and more below.</h1><a href="#video" data-scroll><img style="border-style: none" src="https://ocpd-content.azureedge.net/cdn/images/down-arrow.svg" width="50" height="50" alt="Scroll Down" /></a>
+    </div>
+    <div class="clear"></div>
+
+  </section>
+  <!-- Body Content-->
+  <input id="hfBoundary" type="hidden" />
+  <input id="hfAgency" type="hidden" />

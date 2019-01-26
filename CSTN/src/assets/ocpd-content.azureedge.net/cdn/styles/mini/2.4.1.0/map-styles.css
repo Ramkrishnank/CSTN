@@ -32,7 +32,7 @@ html, body {
 
 #sb-site, #divReportPage, #divAlertsSignUp {
   
-  min-height: 600px;
+  min-height: 75px;
   height: 100%;
   min-width: 1000px;
   width: 100%;

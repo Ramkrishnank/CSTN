@@ -1,0 +1,635 @@
+
+
+
+
+<!DOCTYPE html>
+
+<!--ArcGIS API CSS Reference -->
+<!--<link rel="stylesheet" href="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/esri.css">-->
+
+<!-- jQuery -->
+<!--<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/jquery-1.10.2.min.js"></script>-->
+
+ <!--Kendo UI MVC Styles 
+<link href="./CSTN/src/assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.common.min.css" rel="stylesheet" type="text/css" />
+<link href="./CSTN/src/assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.all.min.css" rel="stylesheet" type="text/css" />
+<link href="./CSTN/src/assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.min.css" rel="stylesheet" type="text/css" />
+<link href="./CSTN/src/assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.default.min.css" rel="stylesheet" type="text/css" />
+<link href="./CSTN/src/assets/ocpd-content.azure--><!--edge.net/cdn/styles/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.default.min.css" rel="stylesheet" type="text/css" />-->
+
+<!-- Kendo UI MVC Scripts -->
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/jquery.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/jszip.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.core.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.angular.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.binder.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.calendar.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.color.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.columnmenu.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.columnsorter.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.data.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.datepicker.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.draganddrop.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.drawing.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.editable.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.excel.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.filtercell.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.filtermenu.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.fx.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.groupable.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.list.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.listview.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.menu.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.actionsheet.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.loader.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.pane.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.popover.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.scroller.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.shim.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.mobile.view.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.numerictextbox.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.ooxml.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.pager.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.pdf.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.popup.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.progressbar.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.reorderable.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.resizable.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.selectable.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.timepicker.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.userevents.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.validator.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.view.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.virtuallist.min.js"></script>
+
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.autocomplete.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.combobox.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.core.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.themes.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.chart.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.chart.funnel.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.dataviz.chart.polar.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.datetimepicker.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.dropdownlist.min.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.grid.min.js"></script>
+
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/kendo/2015.2.805/kendo.aspnetmvc.min.js"></script>
+
+<!--ArcGIS API JS Reference:  Must come after Kendo Scripts to prevent conflicts -->
+<!--<script src="https://js.arcgis.com/3.14/"></script>-->
+
+<!-- Load Google Analytics -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+  i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+    (i[r].q = i[r].q || []).push(arguments)
+  }, i[r].l = 1 * new Date(); a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '../www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-73322505-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Google Analytics Event Tracking -->
+<script type="text/javascript" src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/analytics/eventtracking.js"></script>
+<!-- Omega References -->
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/site/scripthelper.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/site/alerts/alertsignup-2.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/site/alerts/alertsignupsettings-2.js"></script>
+<script src="../CSTN/src/assets/ocpd-content.azureedge.net/cdn/scripts/mini/2.4.1.0/site/alerts/alertsignupmap-2.js"></script>
+
+<!-- Omega Styles -->
+
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    alertsModel = {
+      "MapType": 1,
+      "LocationSearchX": "",
+      "LocationSearchY": "",
+      "WhatCrimeAttributeCategories": [
+        {
+          "id": 1,
+          "na": "Arson"
+        },
+        {
+          "id": 2,
+          "na": "Assault"
+        },
+        {
+          "id": 3,
+          "na": "Burglary"
+        },
+        {
+          "id": 4,
+          "na": "Disturbing the Peace"
+        },
+        {
+          "id": 5,
+          "na": "Drugs / Alcohol Violations"
+        },
+        {
+          "id": 6,
+          "na": "DUI"
+        },
+        {
+          "id": 7,
+          "na": "Fraud"
+        },
+        {
+          "id": 8,
+          "na": "Homicide"
+        },
+        {
+          "id": 9,
+          "na": "Motor Vehicle Theft"
+        },
+        {
+          "id": 10,
+          "na": "Robbery"
+        },
+        {
+          "id": 11,
+          "na": "Sex Crimes"
+        },
+        {
+          "id": 12,
+          "na": "Theft / Larceny"
+        },
+        {
+          "id": 13,
+          "na": "Vandalism"
+        },
+        {
+          "id": 14,
+          "na": "Vehicle Break-In / Theft"
+        },
+        {
+          "id": 15,
+          "na": "Weapons"
+        }
+      ],
+      "WhatSelectedCrimeAttributeCategories": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "WhatOffenderAttributeCategories": [
+        {
+          "id": 17,
+          "na": "Sex Offender"
+        },
+        {
+          "id": 18,
+          "na": "Sexual Predator"
+        }
+      ],
+      "WhatSelectedOffenderAttributeCategories": [],
+      "BufferDistanceShortcuts": [
+        {
+          "na": "500 feet",
+          "ds": 152.4,
+          "lr": 1,
+          "id": 1
+        },
+        {
+          "na": "1000 feet",
+          "ds": 304.8,
+          "lr": 2,
+          "id": 2
+        },
+        {
+          "na": "1500 feet",
+          "ds": 457.2,
+          "lr": 3,
+          "id": 3
+        },
+        {
+          "na": "1/4 mile",
+          "ds": 402.336,
+          "lr": 4,
+          "id": 4
+        },
+        {
+          "na": "1/2 mile",
+          "ds": 804.672,
+          "lr": 5,
+          "id": 5
+        },
+        {
+          "na": "1 mile",
+          "ds": 1609.34,
+          "lr": 6,
+          "id": 6
+        },
+        {
+          "na": "2 miles",
+          "ds": 3218.69,
+          "lr": 7,
+          "id": 7
+        }
+      ],
+      "SuggestionSettings": {
+        "nc": 3,
+        "lc": "USA,CAN",
+        "mns": 10,
+        "mgs": 80,
+        "ds": 16093.4,
+        "gu": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/find",
+        "su": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/suggest"
+      },
+      "MapSettings": {
+        "ol": {
+          "sm": {
+            "ox": 11.0,
+            "oy": 15.0,
+            "in": "OrganizationMarker.SVG"
+          },
+          "ss": {
+            "ox": 10.0,
+            "oy": 8.0,
+            "in": "SelectedOrganizationMarker.SVG"
+          }
+        },
+        "ls": {
+          "ox": 1.1,
+          "oy": 1.2,
+          "in": "MyLocation.svg"
+        },
+        "sf": {
+          "qg": {
+            "ol": {
+              "co": "#FFE60F0F",
+              "wd": 3.0,
+              "st": 0
+            },
+            "co": "#7FFFFFFF",
+            "st": 6
+          },
+          "pt": {
+            "ox": 0.0,
+            "oy": 0.0,
+            "in": "MyLocation.svg"
+          },
+          "ln": {
+            "co": "#7F2A6199",
+            "wd": 4.0,
+            "st": 5
+          },
+          "pl": {
+            "ol": {
+              "co": "#FFFFFFFF",
+              "wd": 3.0,
+              "st": 5
+            },
+            "co": "#FF2A6199",
+            "st": 6
+          }
+        },
+        "rl": {
+          "ds": 0,
+          "px": 6.0,
+          "py": 17.0,
+          "vs": [],
+          "sx": 0.0,
+          "sy": 3.0,
+          "lx": 0.0,
+          "ly": 40.0
+        },
+        "mxs": 30000000.0,
+        "mns": 2250.0,
+        "zs": 5000.0,
+        "zms": 200000.0,
+        "mrs": 500000.0,
+        "mls": 10000.0,
+        "ums": false,
+        "bid": 1,
+        "bl": [
+          {
+            "$type": "OmegaGroup.Civic.Data.Map.Layers.TileBackgroundLayer, OmegaGroup.Civic.Data",
+            "ul": "https://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer",
+            "id": 1,
+            "nm": "Streets",
+            "lr": 1
+          },
+          {
+            "$type": "OmegaGroup.Civic.Data.Map.Layers.TileBackgroundLayer, OmegaGroup.Civic.Data",
+            "ul": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer",
+            "id": 2,
+            "nm": "Terrain",
+            "lr": 2
+          },
+          {
+            "$type": "OmegaGroup.Civic.Data.Map.Layers.TileBackgroundLayer, OmegaGroup.Civic.Data",
+            "ul": "https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer",
+            "id": 3,
+            "nm": "Imagery",
+            "lr": 3
+          }
+        ]
+      },
+      "Startup": {
+        "x": -13041230.0081099,
+        "y": 3857631.01463399,
+        "sc": 200000.0
+      },
+      "CultureFolder": "",
+      "MyLocationSymbol": {
+        "ox": 1.1,
+        "oy": 1.2,
+        "in": "MyLocation.svg"
+      },
+      "DefaultBuffer": 804.672,
+      "ResourcePath": "https://ocpd-content.azureedge.net/cdn",
+      "VersionPath": "/mini/2.4.1.0/"
+    };
+    AlertSignupSettings.Load(alertsModel);
+    AlertSignupMap.Init(alertsModel);
+  });
+</script>
+
+<html lang="en">
+
+<!-- Mirrored from www.crimemapping.com/Alerts by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Dec 2018 08:35:39 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <title>Receive Alerts</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!--<link rel="stylesheet" href="./CSTN/src/assets/ocpd-content.azureedge.net/cdn/styles/mini/2.4.1.0/styles.css" />-->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <link rel="stylesheet" href="../../Styles/ie.css">
+  <![endif]-->
+</head>
+<body>
+
+  <ul id="alertNavigation" class="navigation" style="display: none">
+    <li class="nav-item"><a href="map.html">Map</a></li>
+    <li class="nav-item"><a href="about.html" target="_blank">About</a></li>
+    <li class="nav-item"><a href="help.html" target="_blank">Help</a></li>
+    <li class="nav-item"><a href="FAQ.html" target="_blank">FAQ</a></li>
+    <li class="nav-item"><a href="Contact.html" target="_blank">Contact</a></li>
+    <li class="nav-item"><a href="WhatsNew.html" target="_blank">What&#39;s New</a></li>
+    <li class="nav-item"><a href="index.html">Home</a></li>
+  </ul>
+  <input type="checkbox" id="nav-trigger" onclick="AlertSignup.CanvasMenuClick();" class="nav-trigger" />
+  <label id="alertLabelForNavTrigger" for="nav-trigger"></label>
+
+  <div id="sb-site" style="background: #FFF">
+
+    <header>
+      <a href="index.html" class="logo" data-scroll><img src="https://ocpd-content.azureedge.net/cdn/images/logo-crimemapping.svg" width="268" height="46" alt="" style="border:none" /></a>
+
+
+
+      <nav class="secondary-nav">
+        <ul>
+          <li><a id="maplink" href="map.html">Map</a></li>
+          <li><a id="about" href="about.html" target="_blank">About</a></li>
+          <li><a id="help" href="help.html" target="_blank">Help</a></li>
+          <li><a id="faq" href="FAQ.html" target="_blank">FAQ</a></li>
+          <li><a id="contact" href="Contact.html" target="_blank">Contact</a></li>
+          <li><a id="whatsnew" href="WhatsNew.html" target="_blank">What&#39;s New</a></li>
+        </ul>
+      </nav>
+
+    </header>
+
+
+
+
+    <div id="modalAlertBgTransparency" style="display: none">
+      <div id="alertLoader" class="initializeAlertContentModal" style="display:none;">
+
+        <div id="floatingCirclesG">
+          <div class="f_circleG" id="frotateG_01"></div>
+          <div class="f_circleG" id="frotateG_02"></div>
+          <div class="f_circleG" id="frotateG_03"></div>
+          <div class="f_circleG" id="frotateG_04"></div>
+          <div class="f_circleG" id="frotateG_05"></div>
+          <div class="f_circleG" id="frotateG_06"></div>
+          <div class="f_circleG" id="frotateG_07"></div>
+          <div class="f_circleG" id="frotateG_08"></div>
+        </div>
+        <p style="margin:25px 0;">
+          Saving Alert...
+        </p>
+      </div>
+    </div>
+    <div id="modalAlertDialog" style="display: none">
+
+    </div>
+
+    <div class="profileSubHeader">
+      <h1 class="myProfile">Create Alert</h1>
+      <a class="save" href="javascript:void(0)" onclick="AlertSignup.SaveAlert();">Save Alert</a>
+
+      <div class="clear"></div>
+    </div>
+
+
+    <div class="columnsContainer">
+      <div class="profileColumnLeft">
+
+        <div class="profileSection">
+          <h1 class="profileSectionHeader">Alert Type</h1>
+          <br><br>
+          <select class="profileComboBox" id="AlertType" style="margin-left:-4px;" onchange="AlertSignup.AlertTypeChange(this)">
+            <option value="1">Crime</option>
+            <option value="2">Sex Offender</option>
+          </select>
+          <br><br>
+        </div>
+
+        <div class="profileSection">
+          <h1 class="profileSectionHeader">Alert Name</h1>
+          <br>
+          <br>
+          <input id="txtAlertName" class="profileInput" type="text" placeholder="ex. Crime Near My House" maxlength="300" />
+          <br><br>
+
+        </div>
+
+        <div class="profileSection">
+          <h1 class="profileSectionHeader">Email Address</h1>
+          <br>
+          <br>
+          <input class="profileInput" type="text" maxlength="500" />
+          <br><br>
+
+        </div>
+
+
+        <div class="profileSection">
+          <h1 class="profileSectionHeader">Email Preferences</h1>
+          <!--<br><br>
+          <input type="checkbox" name="checkboxG1" id="checkboxG1" class="css-checkbox" /><label for="checkboxG1" class="css-label">Yes, send me an emailed summary report.</label>
+          -->
+          <br><br>
+          <input type="radio" id="radioEPHtml" name="radioEmailPref" class="profileRadio" checked="checked" onclick="AlertSignup.EmailFormatChange(this)" /><label for="radioEPHtml" class="profileRadioLabel radGroup1">HTML</label>
+          <br />
+          <span id="spEmailFormat" style="margin-left:25px;display:block;">
+            <br />
+            <input type="radio" id="radioListView" name="radioEmailFormat" class="profileRadio" checked="checked" /><label for="radioListView" class="profileRadioLabel radGroup2" style="margin:-16px 23px 0 0;">List View</label><img src="https://ocpd-content.azureedge.net/cdn/images/alert-list-view.svg" width="25" height="25" alt="" style="border:none" />
+            <br /><br />
+            <input type="radio" id="radioTableView" name="radioEmailFormat" class="profileRadio" /><label for="radioTableView" class="profileRadioLabel radGroup2" style="margin:-16px 10px 0 0;">Table View</label><img src="https://ocpd-content.azureedge.net/cdn/images/alert-table-view.svg" width="25" height="26" alt="" style="border:none" />
+          </span>
+
+          <br>
+          <input type="radio" id="radioEPText" name="radioEmailPref" class="profileRadio" onclick="AlertSignup.EmailFormatChange(this)" /><label for="radioEPText" class="profileRadioLabel radGroup1">Text</label>
+          <br>
+          <br>
+        </div>
+
+      </div>
+
+
+      <div class="profileColumnCenter">
+        <div class="profileSection">
+          <h1 class="profileSectionHeader">Location Selection</h1>
+          <br>
+
+
+
+
+
+          <span class="subtitle" style="text-align:left">Enter an Address</span>
+          <br>
+          <div id="divAlertsSecondaryLocationSearch" style="display:none">
+            <span class="clearSearch" style="left: 62%; top: 282px; display:none"><a class="btnClearSearch" href="javascript:void(0);" onclick="AlertSignup.MobileMapClearAddressSearch($('#txtAlertsLocationSearch'))"></a></span>
+            <input id="txtAlertsLocationSearch" class="profileInput" type="text" onfocus="AlertSignup.OpenLocationSearch()" />
+          </div>
+          <div id="divAlertsStandardLocationSearch" class="profileInputSurroundKendo">
+            <input class="landingInputKendo" id="locationSearchSignupAlerts" name="locationSearchSignupAlerts" style="width:100%;float:left;background:#fcfcfc;border-radius:0px;padding:0px;border: 0px solid rgb(230, 230, 230);height:37px;" type="text" />
+            <script>
+              jQuery(function () { jQuery("#locationSearchSignupAlerts").kendoAutoComplete({ "select": AlertSignup.LocationSuggestSelectedSignupAlerts, "change": AlertSignup.LocationSearchTextChangedSignupAlerts, "open": AlertSignup.LocationSuggestOpenSignupAlerts, "dataSource": { "transport": { "read": { "url": "/Alerts/GetLocationSuggestions", "data": AlertSignup.LocationSuggestParametersSignupAlerts }, "prefix": "" }, "serverFiltering": true, "filter": [], "schema": { "errors": "Errors" } }, "dataTextField": "Text", "minLength": 3, "template": "\u003cdiv style=\"width:auto;height:20px;padding:0px;text-align:left;\"\u003e\u003cdiv style=\"width:5%;float:left;\"\u003e# if (Source == \"0\")  { #\u003cimg src=\u0027https://ocpd-content.azureedge.net/cdn/images/map/location-type-address.svg\u0027 style=\"float:left;width:25px;height:25px;\" /\u003e# } else if(Source == \"1\"){ #\u003cimg src=\u0027https://ocpd-content.azureedge.net/cdn/images/map/location-type-boundary-polygon.svg\u0027 style=\"float:left;width:25px;height:25px;\" /\u003e# } else if(Source == \"2\"){ #\u003cimg src=\u0027https://ocpd-content.azureedge.net/cdn/images/map/location-type-feature-point.svg\u0027 style=\"float:left;width:25px;height:25px;\" /\u003e# } else if(Source == \"3\"){ #\u003cimg src=\u0027https://ocpd-content.azureedge.net/cdn/images/map/location-type-line.svg\u0027 style=\"float:left;width:25px;height:25px;\" /\u003e# } else if(Source == \"4\"){ #\u003cimg src=\u0027https://ocpd-content.azureedge.net/cdn/images/map/location-type-agency.svg\u0027 style=\"float:left;width:25px;height:25px;\" /\u003e# } #\u003c/div\u003e\u003cdiv style=\"float:left;display:block;width:95%;text-align:left;\"\u003e\u003cspan style=\"font-size:12px;font-weight:bold;margin:0px 0px 5px 5px;\"\u003e#=Text#\u003c/span\u003e\u003cspan style=\"font-size:12px;color:dddddd;font-style:italic;\"\u003e # if(Source == \"1\") {  #(boundary polygon)# } else if(Source == \"2\"){ #(feature point)# } else if(Source == \"3\"){ #(polyline)# } else if(Source == \"4\"){ #(agency)# } #\u003c/span\u003e\u003c/div\u003e\u003c/div\u003e", "placeholder": "Enter an address, landmark or zip code" }); });
+            </script>
+          </div>
+          <br /><br />
+        </div>
+
+
+
+
+        <div class="profileSection">
+          <h1 class="profileSectionHeader">Choose a Search Distance</h1>
+          <br><br>
+          <input id="hfDefaultAlertDistance" type="hidden" value="804.672" />
+          <select class="profileComboBox" id="Buffer" style="margin-left:-4px;">
+            <option value="152.4">500 feet</option>
+            <option value="304.8">1000 feet</option>
+            <option value="457.2">1500 feet</option>
+            <option value="402.336">1/4 mile</option>
+            <option selected="selected" value="804.672">1/2 mile</option>
+            <option value="1609.34">1 mile</option>
+            <option value="3218.69">2 miles</option>
+          </select>
+          <br>
+          <br>
+        </div>
+
+        <div class="profileSection">
+
+          <a class="greenSubmit" href="javascript:void(0)" onclick="AlertSignup.VerifyAddress();"> Verify Address</a>
+          <br />
+          <br />
+          <span id="spVerifyAddressFound" style="font-weight:bold; color:#2dc74a; display: none">Crime Found. We have crime data for this location.</span>
+          <span id="spVerifyAddressNotFound" style="font-weight:bold; color:#ed1c24; display: none">We’re sorry, we don’t have crime data for this location. <a class="" href="help.html#no-data-for-address">Why Not?</a></span>
+          <br />
+          <div id="mapAlert" style="width:100%; height:250px"></div>
+
+        </div>
+
+
+      </div>
+
+
+
+      <style type="text/css">
+        .k-widget {
+          border-style: none;
+          border-width: 0px;
+        }
+      </style>
+
+      <script type="text/x-kendo-tmpl" id="whatListViewTemplate">
+        <div style="color:white; border-color:rgb(51,51,51)">
+          <table style="width:100%; border:1px white">
+            <tr>
+              <td style="width:3%" onclick="AlertSignup.WhatPanelClick('${ID}',false)">
+                <img src="https://ocpd-content.azureedge.net/cdn/images/IncidentType/WhatPanel/${ID}.svg" height="28" width="28" />
+              </td>
+              <td onclick="WhatPanelClick('${ID}',false)">
+                &nbsp;
+              </td>
+              <td style="width:94%;" onclick="AlertSignup.WhatPanelClick('${ID}',false)">
+                <a style="padding-left:10px; float:left; cursor:pointer; color:black; text-decoration:none">${Name}</a>
+              </td>
+              <td style="width:3%">
+                <input type="checkbox" name="${ID}" id="${ID}" class="redCheck-checkbox" onclick="AlertSignup.WhatPanelClick('${ID}',true)" /><label for="${ID}" class="redCheck-label"></label>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </script>
+
+      <div class="profileColumnRight">
+        <div class="profileSection">
+          <h1 class="profileSectionHeader">Display Options</h1>
+
+          <br>
+          <span class="subtitle" style="text-align:left">What type of records would you like to see?</span>
+          <br>
+          <a class="btnGrayText" href="javascript:void(0)" onclick="AlertSignup.WhatAttributeCategoriesAlertsSelectAll()">Select All | </a><a class="btnGrayText" href="javascript:void(0)" onclick="AlertSignup.WhatAttributeCategoriesAlertsDeselectAll()">Deselect All</a>
+          <br>
+          <br>
+          <divCrimeAttributeTypes id="whatCrimeListViewAlertSignup" style="display:block;"></divCrimeAttributeTypes>
+          <script>
+            jQuery(function () { jQuery("#whatCrimeListViewAlertSignup").kendoListView({ "dataBound": AlertSignup.WhatCrimeAttributeCategoriesSelected, "dataSource": { "type": (function () { if (kendo.data.transports['aspnetmvc-ajax']) { return 'aspnetmvc-ajax'; } else { throw new Error('The kendo.aspnetmvc.min.js script is not included.'); } })(), "transport": { "read": { "url": "" }, "prefix": "" }, "serverPaging": true, "serverSorting": true, "serverFiltering": true, "serverGrouping": true, "serverAggregates": true, "filter": [], "schema": { "data": "Data", "total": "Total", "errors": "Errors", "model": { "fields": { "ID": { "type": "number" }, "Name": { "type": "string" } } } }, "data": { "Data": [{ "ID": 1, "Name": "Arson" }, { "ID": 2, "Name": "Assault" }, { "ID": 3, "Name": "Burglary" }, { "ID": 4, "Name": "Disturbing the Peace" }, { "ID": 5, "Name": "Drugs / Alcohol Violations" }, { "ID": 6, "Name": "DUI" }, { "ID": 7, "Name": "Fraud" }, { "ID": 8, "Name": "Homicide" }, { "ID": 9, "Name": "Motor Vehicle Theft" }, { "ID": 10, "Name": "Robbery" }, { "ID": 11, "Name": "Sex Crimes" }, { "ID": 12, "Name": "Theft / Larceny" }, { "ID": 13, "Name": "Vandalism" }, { "ID": 14, "Name": "Vehicle Break-In / Theft" }, { "ID": 15, "Name": "Weapons" }], "Total": 15, "AggregateResults": null } }, "template": kendo.template(jQuery('#whatListViewTemplate').html()) }); });
+          </script>
+
+          <divOffenderAttributeTypes id="whatOffenderListViewAlertSignup" style="display:block;"></divOffenderAttributeTypes>
+          <script>
+            jQuery(function () { jQuery("#whatOffenderListViewAlertSignup").kendoListView({ "dataBound": AlertSignup.WhatOffenderAttributeCategoriesSelected, "dataSource": { "type": (function () { if (kendo.data.transports['aspnetmvc-ajax']) { return 'aspnetmvc-ajax'; } else { throw new Error('The kendo.aspnetmvc.min.js script is not included.'); } })(), "transport": { "read": { "url": "" }, "prefix": "" }, "serverPaging": true, "serverSorting": true, "serverFiltering": true, "serverGrouping": true, "serverAggregates": true, "filter": [], "schema": { "data": "Data", "total": "Total", "errors": "Errors", "model": { "fields": { "ID": { "type": "number" }, "Name": { "type": "string" } } } }, "data": { "Data": [{ "ID": 17, "Name": "Sex Offender" }, { "ID": 18, "Name": "Sexual Predator" }], "Total": 2, "AggregateResults": null } }, "template": kendo.template(jQuery('#whatListViewTemplate').html()) }); });
+          </script>
+        </div>
+
+        <div class="profileSection">
+          <h1 class="profileSectionHeader">Sex Offenders</h1>
+          <br><br>
+          <input type="checkbox" name="checkboxG2" id="checkboxG2" class="css-checkbox" /><label for="checkboxG2" class="css-label">Yes, I want a link to state sex offenders in my alert.</label>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <div id="divLocationSearch" style="width:100%; display:none">
+
+  </div>
+
+
+  <script src="./CSTN/src/assets/ocpd-content.azureedge.net/cdn/Scripts/mini/2.4.1.0/scroll.js"></script>
+</body>
+
+<!-- Mirrored from www.crimemapping.com/Alerts by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Dec 2018 08:35:40 GMT -->
+</html>

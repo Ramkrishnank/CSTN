@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -8,6 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { MapComponent } from './map/map.component';
 import { ContactComponent } from './contact/contact.component';
 import { AlertComponent } from './alert/alert.component';
+import { NgForm, FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
+ 
 
 @NgModule({
   declarations: [
@@ -20,9 +24,14 @@ import { AlertComponent } from './alert/alert.component';
     AlertComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent },
+      { path: 'map', component: MapComponent}
+    ])
   ],
-  providers: [],
+  providers: [{ provide: APP_BASE_HREF, useValue: window['_app_base'] || '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
